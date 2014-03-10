@@ -5,7 +5,7 @@ Template.memberSubmit.events({
 		var member = {
 			firstname: $(e.target).find('[name=firstname]').val(),
 			lastname: $(e.target).find('[name=lastname]').val(),
-			organization: $(e.target).find('[name=message]').val()
+			organization: $(e.target).find('[name=organization]').val()
 		}
 
 		member._id = Members.insert(member);
