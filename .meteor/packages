@@ -9,3 +9,6 @@ preserve-inputs
 bootstrap
 iron-router
 spin
+accounts-password
+roles
+accounts-ui-bootstrap-dropdown
