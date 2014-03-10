@@ -11,6 +11,11 @@ if (Members.find().count() === 0) {
 		lastname: 'Phillips',
 		organization: 'Landes Bioscience'
 	});
+	Members.insert({
+		firstname: 'Jane',
+		lastname: 'Doe',
+		organization: 'Landes Bioscience'
+	});
 
 	
 }
