@@ -1,8 +1,10 @@
 <template name="memberProfile">
   <div class="member">
     <div class="member-profile">
-    	<h2>{{firstname}} {{lastname}}</h2>
+    	<h2>{{prefix}} {{firstname}} {{lastname}} {{suffix}}</h2>
     	<h3><span> {{organization}}</span></h3>
+    	<h5>Affiliations:</h5><p>{{institution1}}, {{institution2}}, {{institution3}}</p>
+
     </div>
   </div>
 </template>

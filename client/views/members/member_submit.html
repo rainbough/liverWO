@@ -1,21 +1,42 @@
 <template name="memberNew">
 	<form class="main">
-		<div class="control-group">
-			<label class="control-label" for="firstname">First Name</label>
-			<div class="controls">
-				<input name="firstname" type="text" value="" placeholder="first name" />
-			</div>
+		<div class="control-group inline">
+			<label class="control-label" for="prefix">Prefix</label>
+			<input class="psfix" name="prefix" type="text" value="" placeholder="Dr." />
 		</div>
-		<div class="control-group">
+		<div class="control-group inline">
+			<label class="control-label" for="firstname">First Name</label>
+			<input name="firstname" type="text" value="" placeholder="first name" />
+		</div>
+		<div class="control-group inline">
 			<label class="control-label" for="lastname">Last Name</label>
 			<div class="controls">
 				<input name="lastname" type="text" value="" placeholder="last name" />
 			</div>
 		</div>
-		<div class="control-group">
-			<label class="control-label" for="organization">Organization</label>
+		<div class="control-group inline">
+			<label class="control-label" for="suffix">Suffix</label>
 			<div class="controls">
-				<input name="organization" type="text" value="" placeholder="organization" />
+				<input class="psfix" name="suffix" type="text" value="" placeholder="suffix" />
+			</div>
+		</div>
+		<br>
+		<div class="control-group inline">
+			<label class="control-label" for="institution1">Institution 1</label>
+			<div class="controls">
+				<input name="institution1" type="text" value="" placeholder="organization name" />
+			</div>
+		</div>
+		<div class="control-group inline">
+			<label class="control-label" for="institution2">Institution 2</label>
+			<div class="controls">
+				<input name="institution2" type="text" value="" placeholder="organization name" />
+			</div>
+		</div>
+		<div class="control-group inline">
+			<label class="control-label" for="institution3">Institution 3</label>
+			<div class="controls">
+				<input name="institution3" type="text" value="" placeholder="organization name" />
 			</div>
 		</div>
 
