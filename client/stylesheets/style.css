@@ -12,6 +12,17 @@ body {
 .psfix{
 	width: 50px;
 }
+.profile-pic img{
+	height:50px;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+}
+.profile-pic-large img{
+	height: 250px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	box-shadow: 1px 1px 4px #222;
+}
 .inline{
 	display: inline-block;
 	margin-right: 10px;

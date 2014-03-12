@@ -9,7 +9,8 @@ Template.memberNew.events({
 			suffix: $(e.target).find('[name=suffix]').val(),
 			institution1: $(e.target).find('[name=institution1]').val(),
 			institution2: $(e.target).find('[name=institution2]').val(),
-			institution3: $(e.target).find('[name=institution3]').val()
+			institution3: $(e.target).find('[name=institution3]').val(),
+			imageUrl: $(e.target).find('[name=image_url]').val()
 		}
 
 		member._id = Members.insert(member);
