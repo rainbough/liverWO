@@ -1,4 +1,4 @@
-Template.memberSubmit.events({
+Template.memberNew.events({
 	'submit form': function(e) {
 		e.preventDefault();
 
