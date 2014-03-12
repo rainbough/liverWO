@@ -4,8 +4,7 @@
     "basePackages": {
       "iron-router": {},
       "spin": {},
-      "roles": {},
-      "accounts-ui-bootstrap-dropdown": {}
+      "roles": {}
     },
     "packages": {
       "iron-router": {
@@ -22,11 +21,6 @@
         "git": "https://github.com/alanning/meteor-roles.git",
         "tag": "v1.2.6",
         "commit": "f2a9058281f8f2fe028767841d7445aadd6893cf"
-      },
-      "accounts-ui-bootstrap-dropdown": {
-        "git": "https://github.com/erobit/meteor-accounts-ui-bootstrap-dropdown.git",
-        "tag": "v0.6.5.1",
-        "commit": "c8b29d2e7f8611d6dec9d6d23c1c2b94e000b0fb"
       }
     }
   }

@@ -2,7 +2,6 @@
   "packages": {
     "iron-router": {},
     "spin": {},
-    "roles": {},
-    "accounts-ui-bootstrap-dropdown": {}
+    "roles": {}
   }
 }

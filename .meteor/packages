@@ -11,4 +11,7 @@ iron-router
 spin
 accounts-password
 roles
-accounts-ui-bootstrap-dropdown
+accounts-ui
+accounts-github
+accounts-base
+service-configuration
