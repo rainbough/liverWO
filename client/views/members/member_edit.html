@@ -1,38 +1,34 @@
-<template name="memberNew">
-	{{#if currentUser}}
-	<h3>Create {{currentUser.username}}'s Profile</h3>
-	{{/if}}
+<template name="memberEdit">
 	<form class="main">
 		<div class="name-group inline">
-			{{#if currentUser}}
+			{{#if username}}
 			<div class="control-group">
-				<label class="control-label" for="username">Username: <strong>{{currentUser.username}}</strong></label>
-				<input class="hidden" type="hidden" name="username" type="text" value="{{currentUser.username}}" placeholder="Dr." />
+				<label class="control-label" for="username">Username: <strong>{{username}}</strong></label>
 			</div>
 			{{/if}}
 			<div class="control-group inline">
 				<label class="control-label" for="prefix">Prefix</label>
-				<input class="psfix" name="prefix" type="text" value="" placeholder="Dr." />
+				<input class="psfix" name="prefix" type="text" value="{{prefix}}" placeholder="Dr." />
 			</div>
 			<div class="control-group inline">
 				<label class="control-label" for="firstname">First Name</label>
-				<input name="firstname" type="text" value="" placeholder="first name" />
+				<input name="firstname" type="text" value="{{firstname}}" placeholder="first name" />
 			</div>
 			<div class="control-group inline">
 				<label class="control-label" for="lastname">Last Name</label>
 				<div class="controls">
-					<input name="lastname" type="text" value="" placeholder="last name" />
+					<input name="lastname" type="text" value="{{lastname}}" placeholder="last name" />
 				</div>
 			</div>
 			<div class="control-group inline">
 				<label class="control-label" for="suffix">Suffix</label>
 				<div class="controls">
-					<input class="psfix" name="suffix" type="text" value="" placeholder="suffix" />
+					<input class="psfix" name="suffix" type="text" value="{{suffix}}" placeholder="suffix" />
 				</div>
 			</div>
 			<div class="control-group inline">
 				<label class="control-label" for="title">Title</label>
-				<input name="title" type="text" value="" placeholder="Professor, assistant, etc." />
+				<input name="title" type="text" value="{{title}}" placeholder="Professor, assistant, etc." />
 			</div>
 		</div>
 		<br>
@@ -40,74 +36,74 @@
 			<div class="control-group inline">
 				<label class="control-label" for="institution1">Institution 1</label>
 				<div class="controls">
-					<input name="institution1" type="text" value="" placeholder="organization name" />
+					<input name="institution1" type="text" value="{{institution1}}" placeholder="organization name" />
 				</div>
 			</div>
 			<div class="control-group inline">
 				<label class="control-label" for="institution2">Institution 2</label>
 				<div class="controls">
-					<input name="institution2" type="text" value="" placeholder="organization name" />
+					<input name="institution2" type="text" value="{{institution2}}" placeholder="organization name" />
 				</div>
 			</div>
 			<div class="control-group inline">
 				<label class="control-label" for="institution3">Institution 3</label>
 				<div class="controls">
-					<input name="institution3" type="text" value="" placeholder="organization name" />
+					<input name="institution3" type="text" value="{{institution3}}" placeholder="organization name" />
 				</div>
 			</div>
 			<br>
 			<div class="control-group inline">
 				<label class="control-label" for="email">Email</label>
 				<div class="controls">
-					<input name="email" type="text" value="" placeholder="me@example.com" />
+					<input name="email" type="text" value="{{email}}" placeholder="me@example.com" />
 				</div>
 			</div>
 			<div class="control-group inline">
 				<label class="control-label" for="imageUrl">Photo Url</label>
 				<div class="controls">
-					<input name="image_url" type="text" value="" placeholder="image url" />
+					<input name="image_url" type="text" value="{{imageUrl}}" placeholder="image url" />
 				</div>
 			</div>
 		</div>
 		<div class="inline address-group">
 			<div class="control-group">
 				<label class="control-label" for="address1">Lab Name</label>
-				<input name="labName" type="text" value="" placeholder="" />
+				<input name="labName" type="text" value="{{labName}}" placeholder="" />
 			</div>
 			<div class="inline">
 				<div class="control-group inline">
 					<label class="control-label" for="address1">Lab Address</label>
-					<input name="address1" type="text" value="" placeholder="" />
+					<input name="address1" type="text" value="{{labAddress1}}" placeholder="" />
 				</div>
 				<div class="control-group inline">
-					<label class="control-label" for="address2">Lab Address line 2</label>
-					<input name="address2" type="text" value="" placeholder="" />
+					<label class="control-label" for="address2">Address line 2</label>
+					<input name="address2" type="text" value="{{labAddress2}}" placeholder="" />
 				</div>
 			</div>
 			<div class="inline">
 				<div class="control-group inline">
 					<label class="control-label" for="city">City</label>
-					<input name="city" type="text" value="" placeholder="" />
+					<input name="city" type="text" value="{{city}}" placeholder="" />
 				</div>
 				<div class="control-group inline">
 					<label class="control-label" for="state">State</label>
-					<input class="psfix" name="state" type="text" value="" placeholder="TX, etc." />
+					<input class="psfix" name="state" type="text" value="{{state}}" placeholder="TX, etc." />
 				</div>
 				<div class="control-group inline">
 					<label class="control-label" for="zip">Zip Code</label>
-					<input class="psfix" name="zip" type="text" value="" placeholder="" />
+					<input class="psfix" name="zip" type="text" value="{{zip}}" placeholder="" />
 				</div>
 			</div>
 			<br>
 			<div class="control-group inline">
 				<label class="control-label" for="country">Country</label>
-				<input name="country" type="text" value="" placeholder="United States" />
+				<input name="country" type="text" value="{{country}}" placeholder="United States" />
 			</div>
 			<div class="control-group inline">
-				<label class="control-label" for="phone">Lab Phone</label>
-				<input name="phone" type="text" value="" placeholder="(555) 555-5555" />
+				<label class="control-label" for="labPhone">Phone</label>
+				<input name="phone" type="text" value="{{labPhone}}" placeholder="(555) 555-5555" />
 			</div>
-			</div>
+		</div>
 			<div class="control-group">
 				<div class="controls">
 					<input type="submit" value="Submit" class="btn btn-primary" />

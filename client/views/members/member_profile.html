@@ -1,14 +1,34 @@
 <template name="memberProfile">
   <div class="member">
+  	<div class="pull-right"><a href="{{_id}}/edit">Edit Profile</a></div>
     <div class="member-profile">
     	<div class="profile inline">
 	    	<h2>{{prefix}} {{firstname}} {{lastname}} {{suffix}}</h2>
 	    	<h3><span> {{organization}}</span></h3>
-	    	<h5>Affiliations:</h5><p>{{institution1}} {{institution2}} {{institution3}}</p>
+	    	{{#if title}}
+	    	<h4>{{title}}</h4>
+	    	{{/if}}
+	    	{{#if institution1}}
+	    	<div class="affiliations">
+	    		<h5>Affiliations:</h5><p>{{institution1}} {{institution2}} {{institution3}}</p>
+	    	</div>
+	    	{{/if}}
 	    </div>
+	    {{#if email}}
+	    <div class="inline"><strong>Contact: </strong><p>{{email}}</p></div>
+	    {{/if}}
 	    {{#if imageUrl}}
 	    <div class="profile-pic-large pull-right inline">
       		<img src="{{imageUrl}}" />
+      	</div>
+      	{{/if}}
+      	{{#if labName}}
+      	<div>
+      		<h4>{{labName}}</h4>
+      		<p>{{labAddress1}} {{labAddress2}}</p>
+      		<p>{{city}}, {{state}} {{zip}}</p>
+      		<p>{{country}}</p>
+      		<h5>Phone: {{labPhone}}</h5>
       	</div>
       	{{/if}}
 

@@ -1,9 +1,8 @@
-Template.memberNew.events({
+Template.memberEdit.events({
 	'submit form': function(e) {
 		e.preventDefault();
-
-		var member = {
-			username: $(e.target).find('[name=username]').val(),
+		var currentMemberId = this._id;
+		var memberProperties = {
 			title: $(e.target).find('[name=title]').val(),
 			prefix: $(e.target).find('[name=prefix]').val(),
 			firstname: $(e.target).find('[name=firstname]').val(),
@@ -24,7 +23,22 @@ Template.memberNew.events({
 			country: $(e.target).find('[name=country]').val()
 		}
 
-		member._id = Members.insert(member);
-		Router.go('memberPage', member);
+		Members.update(currentMemberId, {$set: memberProperties}, function(error) {
+			if (error) {
+				alert(error.reason);
+			} else {
+				Router.go('memberPage', {_id: currentMemberId});
+			}
+		});
+		
+	},
+	'click .delete': function(e) {
+		e.preventDefault();
+		if(confirm("Delete this member?")) {
+			var currentMemberId = this._id;
+			Members.remove(currentMemberId);
+			Router.go('membersList');
+		}
 	}
 });
+

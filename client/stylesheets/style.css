@@ -34,7 +34,12 @@ body {
 #spinner { height: 300px } 
 .member {
 	*zoom: 1;
-	-webkit-transition: all 300ms 0ms; -webkit-transition-delay: ease-in; -moz-transition: all 300ms 0ms ease-in; -o-transition: all 300ms 0ms ease-in; transition: all 300ms 0ms ease-in; position: relative;
+	-webkit-transition: 
+	all 300ms 0ms; -webkit-transition-delay: ease-in; -moz-transition: 
+	all 300ms 0ms ease-in; -o-transition: 
+	all 300ms 0ms ease-in; transition: 
+	all 300ms 0ms ease-in; 
+	position: relative;
 	opacity: 1;
 }
 .member:before, .member:after {
@@ -46,7 +51,7 @@ body {
 .member .upvote {
 	display: block; margin: 7px 12px 0 0; float: left;
 }
-.member-profile { height: 300px;}
+.member-profile { height: auto;}
 .member .member-content { float: left } 
 .member .member-content h3 {
 	margin: 0; 
