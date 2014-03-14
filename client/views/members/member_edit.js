@@ -12,7 +12,6 @@ Template.memberEdit.events({
 			institution2: $(e.target).find('[name=institution2]').val(),
 			institution3: $(e.target).find('[name=institution3]').val(),
 			imageUrl: $(e.target).find('[name=image_url]').val(),
-			email: $(e.target).find('[name=email]').val(),
 			labPhone: $(e.target).find('[name=phone]').val(),
 			labName: $(e.target).find('[name=labName]').val(),
 			labAddress1: $(e.target).find('[name=address1]').val(),

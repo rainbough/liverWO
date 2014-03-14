@@ -1,5 +1,17 @@
 Members = new Meteor.Collection('members');
 
+Members.allow({
+	update: ownsProfile,
+	remove: ownsProfile
+});
+
+Members.deny({
+	update: function(userId, member, fieldNames) {
+		//may only edit the following fields:
+		return (_.without(fieldNames, 'firstname', 'lastname', 'suffix', 'prefix', 'institution1', 'institution2', 'institution3', 'labName', 'labAddress1', 'email', 'title', 'labAddress2', 'city', 'state', 'zip', 'labPhone', 'country', 'imageUrl').length > 0);
+	}
+});
+
 Meteor.methods({
 	member: function(memberAttributes) {
 		var user = Meteor.user(),
