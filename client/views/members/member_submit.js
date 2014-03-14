@@ -24,7 +24,11 @@ Template.memberNew.events({
 			country: $(e.target).find('[name=country]').val()
 		}
 
-		member._id = Members.insert(member);
-		Router.go('memberPage', member);
+		Meteor.call('member', member, function(error, id) { 
+			if (error)
+				return alert(error.reason);
+
+			Router.go('memberPage', {_id: id}); 
+		});
 	}
 });

@@ -25,10 +25,14 @@
       	{{#if labName}}
       	<div>
       		<h4>{{labName}}</h4>
+          {{#if labAddress}}
       		<p>{{labAddress1}} {{labAddress2}}</p>
       		<p>{{city}}, {{state}} {{zip}}</p>
       		<p>{{country}}</p>
+          {{/if}}
+          {{#if labPhone}}
       		<h5>Phone: {{labPhone}}</h5>
+          {{/if}}
       	</div>
       	{{/if}}
 
