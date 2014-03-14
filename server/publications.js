@@ -2,6 +2,7 @@ Meteor.publish('members', function() {
 	return Members.find();
 });
 
+
 // server/publish.js
 
 // Give authorized users access to sensitive data by group

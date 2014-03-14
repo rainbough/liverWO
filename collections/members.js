@@ -22,9 +22,9 @@ Meteor.methods({
 				'A profile is already associated with this email.',
 				memberWithSameEmail._id);
 		}
-		var member = _.extend(_.pick(memberAttributes, 'email', 'firstname', 'lastname'), {
+		var member = _.extend(_.pick(memberAttributes, 'email', 'firstname', 'lastname', 'suffix', 'prefix', 'institution1', 'institution2', 'institution3', 'labName', 
+				'labAddress1', 'title', 'labAddress2', 'city', 'state', 'zip', 'labPhone', 'country', 'imageUrl' ), {
 			userId: user._id,
-			author: user.email,
 			submitted: new Date().getTime()
 		});
 

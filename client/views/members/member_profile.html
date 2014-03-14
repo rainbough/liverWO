@@ -2,30 +2,37 @@
   <div class="member">
   	<div class="pull-right"><a href="{{_id}}/edit">Edit Profile</a></div>
     <div class="member-profile">
-    	<div class="profile inline">
-	    	<h2>{{prefix}} {{firstname}} {{lastname}} {{suffix}}</h2>
-	    	<h3><span> {{organization}}</span></h3>
-	    	{{#if title}}
-	    	<h4>{{title}}</h4>
-	    	{{/if}}
+    	<div class="profile">
+  	    <h2>{{prefix}} {{firstname}} {{lastname}} {{suffix}}</h2>
+        <div class="title-group inline">
+  	    	<h3><span> {{organization}}</span></h3>
+  	    	{{#if title}}
+  	    	  <h4>{{title}}</h4>
+  	    	{{/if}}
+        </div>
+        {{#if imageUrl}}
+          <div class="profile-pic-large pull-right inline">
+              <img src="{{imageUrl}}" />
+          </div>
+        {{/if}}
+        <br>
 	    	{{#if institution1}}
-	    	<div class="affiliations">
-	    		<h5>Affiliations:</h5><p>{{institution1}} {{institution2}} {{institution3}}</p>
-	    	</div>
+  	    	<div class="affiliations inline">
+  	    		<h5>Affiliations:</h5>
+            <p>{{institution1}}</p> 
+              {{#if institution2}}
+                <p>{{institution2}}</p>
+              {{/if}} 
+              {{#if institution3}}
+                <p>{{institution3}}</p>
+              {{/if}}
+  	    	</div>
 	    	{{/if}}
 	    </div>
-	    {{#if email}}
-	    <div class="inline"><strong>Contact: </strong><p>{{email}}</p></div>
-	    {{/if}}
-	    {{#if imageUrl}}
-	    <div class="profile-pic-large pull-right inline">
-      		<img src="{{imageUrl}}" />
-      	</div>
-      	{{/if}}
-      	{{#if labName}}
-      	<div>
+    	{{#if labName}}
+      	<div class="lab-group inline">
       		<h4>{{labName}}</h4>
-          {{#if labAddress}}
+          {{#if labAddress1}}
       		<p>{{labAddress1}} {{labAddress2}}</p>
       		<p>{{city}}, {{state}} {{zip}}</p>
       		<p>{{country}}</p>
@@ -33,9 +40,11 @@
           {{#if labPhone}}
       		<h5>Phone: {{labPhone}}</h5>
           {{/if}}
-      	</div>
-      	{{/if}}
-
+        </div>
+      {{/if}}
+      {{#if email}}
+        <div><strong>Contact: </strong><p>{{email}}</p></div>
+      {{/if}}
     </div>
   </div>
 </template>
