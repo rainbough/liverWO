@@ -12,6 +12,5 @@ spin
 accounts-password
 roles
 accounts-ui
-accounts-github
 accounts-base
 service-configuration
