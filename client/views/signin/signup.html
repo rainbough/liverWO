@@ -1,0 +1,26 @@
+<template name="signUp">
+	{{#unless currentUser}}
+	<h3>Create New Account</h3>
+	<form id="register" action="">
+		<div class="control-group">
+			<label class="control-label" for="email">Email</label>
+			<input name="email" type="email" value="" placeholder="email@example.com" />
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="password">Password</label>
+			<input name="password" type="password" value="" placeholder="" />
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" value="Create an Account" class="btn btn-primary" />
+			</div>
+		</div>
+   </form> 
+   {{/unless}}
+   {{#if currentUser}}
+   	You are logged in as: <strong>{{email}}</strong>
+
+   	<div><a id="logout" href="#">Log Out</a></div>
+   {{/if}}
+
+</template>
