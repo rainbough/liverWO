@@ -9,6 +9,9 @@
       <a class="brand" href="/">Liver</a>
       <div class="nav-collapse collapse">
       	<ul class="nav pull-right">
+          {{#unless currentUser}}
+          <li><a href="/signin">Login / Register</a></li>
+          {{/unless}}
           {{#if currentUser}}
       		<li><a href="/signin">{{email}}</a></li>
           {{/if}}
