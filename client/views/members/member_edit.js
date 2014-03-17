@@ -24,7 +24,7 @@ Template.memberEdit.events({
 
 		Members.update(currentMemberId, {$set: memberProperties}, function(error) {
 			if (error) {
-				alert(error.reason);
+				throwError(error.reason);
 			} else {
 				Router.go('memberPage', {_id: currentMemberId});
 			}

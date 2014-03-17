@@ -25,10 +25,14 @@ Template.memberNew.events({
 		}
 
 		Meteor.call('member', member, function(error, id) { 
-			if (error)
-				return alert(error.reason);
-
-			Router.go('memberPage', {_id: id}); 
+			if (error) {
+				throwError(error.reason);
+				
+				if (error.error === 302)
+					Router.go('memberPage', {_id: error.details})
+			} else {
+				Router.go('memberPage', {_id: id});
+			}
 		});
 	}
 });

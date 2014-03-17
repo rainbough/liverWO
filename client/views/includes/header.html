@@ -9,7 +9,9 @@
       <a class="brand" href="/">Liver</a>
       <div class="nav-collapse collapse">
       	<ul class="nav pull-right">
-      		<li>{{loginButtons align="right"}}</li>
+          {{#if currentUser}}
+      		<li>{{email}}</li>
+          {{/if}}
       	</ul>
       </div>
     </div>
