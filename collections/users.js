@@ -20,13 +20,13 @@ Meteor.methods({
       	var correctPassword = passwordsMatch(password, password2);
 
 		if(!correctPassword)
-        throw new Meteor.Error(422, "Password fields do not match.");
+            throw new Meteor.Error(422, "Password fields do not match.");
      
         if (!goodPassword)
-        throw new Meteor.Error(422, "Password needs to be at least 6 characters long.");
+            throw new Meteor.Error(422, "Password needs to be at least 6 characters long.");
 
     	if (goodPassword && correctPassword) {
 			Accounts.createUser({email: email, password: password});
-         }
+        }
 	}
 });

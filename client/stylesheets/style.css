@@ -9,6 +9,14 @@ body {
 	background: #eee;
 	color: #666666;
 }
+footer{
+	width: 100%;
+	height: 200px;
+	background: teal;
+	margin-top: 300px;
+	margin-bottom: -100px;
+}
+
 .psfix{
 	width: 50px;
 }

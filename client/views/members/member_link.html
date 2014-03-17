@@ -1,15 +1,14 @@
 <template name="memberLink">
-  <div class="member">
-  	{{#if imageUrl}}
-  	<div class="profile-pic pull-left inline">
-      	<img src="{{imageUrl}}" />
+    <div class="member">
+        {{#if imageUrl}}
+            <div class="profile-pic pull-left inline">
+                <img src="{{imageUrl}}" />
+            </div>
+        {{/if}}
+        <div class="member-content inline">
+            <div class="member-list inline">
+                <h3><a href="{{pathFor 'memberPage'}}">{{prefix}} {{firstname}} {{lastname}} {{suffix}}</a><span> {{institution1}} {{organization}}</span></h3>
+            </div>
+        </div>
     </div>
-    {{/if}}
-  	<div class="member-content inline">
-    	<div class="member-list inline">
-      		<h3><a href="{{pathFor 'memberPage'}}">{{prefix}} {{firstname}} {{lastname}} {{suffix}}</a><span> {{institution1}} {{organization}}</span></h3>
-      	</div>
-    </div>
-  
-  </div>
 </template>
