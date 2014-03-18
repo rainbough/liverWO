@@ -5,10 +5,10 @@
 
 standard-app-packages
 preserve-inputs
-bootstrap
 iron-router
 spin
 accounts-password
 roles
 accounts-base
 service-configuration
+bootstrap-3

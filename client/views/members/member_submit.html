@@ -12,11 +12,15 @@
 			{{/if}}
 			<div class="control-group inline">
 				<label class="control-label" for="prefix">Prefix</label>
-				<input class="psfix" name="prefix" type="text" value="" placeholder="Dr." />
+				<div class="controls">
+					<input class="psfix" name="prefix" type="text" value="" placeholder="Dr." />
+				</div>
 			</div>
 			<div class="control-group inline">
 				<label class="control-label" for="firstname">First Name</label>
-				<input name="firstname" type="text" value="" placeholder="first name" />
+				<div class="controls">
+					<input name="firstname" type="text" value="" placeholder="first name" />
+				</div>
 			</div>
 			<div class="control-group inline">
 				<label class="control-label" for="lastname">Last Name</label>
@@ -32,9 +36,12 @@
 			</div>
 			<div class="control-group inline">
 				<label class="control-label" for="title">Title</label>
-				<input name="title" type="text" value="" placeholder="Professor, assistant, etc." />
+				<div class="controls">
+					<input name="title" type="text" value="" placeholder="Professor, assistant, etc." />
+				</div>
 			</div>
 		</div>
+		<br>
 		<br>
 		<div class="institution-group inline">
 			<div class="control-group inline">
@@ -56,6 +63,7 @@
 				</div>
 			</div>
 			<br>
+			<br>
 			<div class="control-group inline">
 				<label class="control-label" for="imageUrl">Photo Url</label>
 				<div class="controls">
@@ -63,49 +71,69 @@
 				</div>
 			</div>
 		</div>
+		<br>
+		<br>
 		<div class="inline address-group">
 			<div class="control-group">
 				<label class="control-label" for="address1">Lab Name</label>
-				<input name="labName" type="text" value="" placeholder="" />
+				<div class="controls">
+					<input name="labName" type="text" value="" placeholder="" />
+				</div>
 			</div>
 			<div class="inline">
 				<div class="control-group inline">
 					<label class="control-label" for="address1">Lab Address</label>
-					<input name="address1" type="text" value="" placeholder="" />
+					<div class="controls">
+						<input name="address1" type="text" value="" placeholder="" />
+					</div>
 				</div>
 				<div class="control-group inline">
 					<label class="control-label" for="address2">Lab Address line 2</label>
-					<input name="address2" type="text" value="" placeholder="" />
+					<div class="controls">
+						<input name="address2" type="text" value="" placeholder="" />
+					</div>
 				</div>
 			</div>
 			<div class="inline">
 				<div class="control-group inline">
 					<label class="control-label" for="city">City</label>
-					<input name="city" type="text" value="" placeholder="" />
+					<div class="controls">
+						<input name="city" type="text" value="" placeholder="" />
+					</div>
 				</div>
 				<div class="control-group inline">
 					<label class="control-label" for="state">State</label>
-					<input class="psfix" name="state" type="text" value="" placeholder="TX, etc." />
+					<div class="controls">
+						<input class="psfix" name="state" type="text" value="" placeholder="TX, etc." />
+					</div>
 				</div>
 				<div class="control-group inline">
 					<label class="control-label" for="zip">Zip Code</label>
-					<input class="psfix" name="zip" type="text" value="" placeholder="" />
+					<div class="controls">
+						<input class="psfix" name="zip" type="text" value="" placeholder="" />
+					</div>
 				</div>
 			</div>
 			<br>
 			<div class="control-group inline">
 				<label class="control-label" for="country">Country</label>
-				<input name="country" type="text" value="" placeholder="United States" />
+				<div class="controls">
+					<input name="country" type="text" value="" placeholder="United States" />
+				</div>
 			</div>
 			<div class="control-group inline">
 				<label class="control-label" for="phone">Lab Phone</label>
-				<input name="phone" type="text" value="" placeholder="(555) 555-5555" />
-			</div>
-			</div>
-			<div class="control-group">
 				<div class="controls">
-					<input type="submit" value="Submit" class="btn btn-primary" />
+					<input name="phone" type="text" value="" placeholder="(555) 555-5555" />
 				</div>
 			</div>
+		</div>
+		<br>
+		<br>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" value="Submit" class="btn btn-primary" />
+			</div>
+		</div>
 	</form>
 </template>

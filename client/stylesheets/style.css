@@ -54,9 +54,20 @@ footer{
 	display: inline-block;
 	margin-right: 10px;
 }	
-.navbar { margin-bottom: 10px } 
+.navbar { 
+	margin-bottom: 10px;
+} 
+.navbar-link{
+	list-style: none;
+}
+.navbar-default {
+	background-color: #fff;
+}
 .navbar .navbar-inner {
 	border-radius: 0px 0px 3px 3px; 
+}
+.controls input{
+	border-radius: 3px;
 }
 #spinner { height: 300px } 
 .member {
