@@ -1,8 +1,8 @@
 // var users = [
 //       {name:"Normal User",email:"normal@example.com",roles:[]},
-//       {name:"View-Secrets User",email:"view@example.com",roles:['view-secrets']},
-//       {name:"Manage-Users User",email:"manage@example.com",roles:['manage-users']},
-//       {name:"Admin User",email:"admin@example.com",roles:['admin']}
+//       {name:"Austin-UT Group",email:"austin-ut@example.com",roles:['austinUT-group']},
+//       {name:"Chicago Group",email:"chicago@example.com",roles:['chigago-group']},
+//       {name:"Liver.WO Admin",email:"admin@700forscience.com",roles:['admin']}
 //     ];
 
 //   _.each(users, function (user) {
