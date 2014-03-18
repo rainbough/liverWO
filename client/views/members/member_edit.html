@@ -8,11 +8,15 @@
 			{{/if}}
 			<div class="control-group inline">
 				<label class="control-label" for="prefix">Prefix</label>
-				<input class="psfix" name="prefix" type="text" value="{{prefix}}" placeholder="Dr." />
+				<div class="controls">
+					<input class="psfix" name="prefix" type="text" value="{{prefix}}" placeholder="Dr." />
+				</div>
 			</div>
 			<div class="control-group inline">
 				<label class="control-label" for="firstname">First Name</label>
-				<input name="firstname" type="text" value="{{firstname}}" placeholder="first name" />
+				<div class="controls">
+					<input name="firstname" type="text" value="{{firstname}}" placeholder="first name" />
+				</div>
 			</div>
 			<div class="control-group inline">
 				<label class="control-label" for="lastname">Last Name</label>
@@ -28,7 +32,9 @@
 			</div>
 			<div class="control-group inline">
 				<label class="control-label" for="title">Title</label>
-				<input name="title" type="text" value="{{title}}" placeholder="Professor, assistant, etc." />
+				<div class="controls">
+					<input name="title" type="text" value="{{title}}" placeholder="Professor, assistant, etc." />
+				</div>
 			</div>
 		</div>
 		<br>
@@ -62,42 +68,60 @@
 		<div class="inline address-group">
 			<div class="control-group">
 				<label class="control-label" for="address1">Lab Name</label>
-				<input name="labName" type="text" value="{{labName}}" placeholder="" />
+				<div class="controls">
+					<input name="labName" type="text" value="{{labName}}" placeholder="" />
+				</div>
 			</div>
 			<div class="inline">
 				<div class="control-group inline">
 					<label class="control-label" for="address1">Lab Address</label>
-					<input name="address1" type="text" value="{{labAddress1}}" placeholder="" />
+					<div class="controls">
+						<input name="address1" type="text" value="{{labAddress1}}" placeholder="" />
+					</div>
 				</div>
 				<div class="control-group inline">
 					<label class="control-label" for="address2">Address line 2</label>
-					<input name="address2" type="text" value="{{labAddress2}}" placeholder="" />
+					<div class="controls">
+						<input name="address2" type="text" value="{{labAddress2}}" placeholder="" />
+					</div>
 				</div>
 			</div>
 			<div class="inline">
 				<div class="control-group inline">
 					<label class="control-label" for="city">City</label>
-					<input name="city" type="text" value="{{city}}" placeholder="" />
+					<div class="controls">
+						<input name="city" type="text" value="{{city}}" placeholder="" />
+					</div>
 				</div>
 				<div class="control-group inline">
 					<label class="control-label" for="state">State</label>
-					<input class="psfix" name="state" type="text" value="{{state}}" placeholder="TX, etc." />
+					<div class="controls">
+						<input class="psfix" name="state" type="text" value="{{state}}" placeholder="TX, etc." />
+					</div>
 				</div>
 				<div class="control-group inline">
 					<label class="control-label" for="zip">Zip Code</label>
-					<input class="psfix" name="zip" type="text" value="{{zip}}" placeholder="" />
+					<div class="controls">
+						<input class="psfix" name="zip" type="text" value="{{zip}}" placeholder="" />
+					</div>
 				</div>
 			</div>
 			<br>
 			<div class="control-group inline">
 				<label class="control-label" for="country">Country</label>
-				<input name="country" type="text" value="{{country}}" placeholder="United States" />
+				<div class="controls">
+					<input name="country" type="text" value="{{country}}" placeholder="United States" />
+				</div>
 			</div>
 			<div class="control-group inline">
 				<label class="control-label" for="labPhone">Phone</label>
-				<input name="phone" type="text" value="{{labPhone}}" placeholder="(555) 555-5555" />
+				<div class="controls">
+					<input name="phone" type="text" value="{{labPhone}}" placeholder="(555) 555-5555" />
+				</div>
 			</div>
 		</div>
+		<br>
+		<br>
 		<div class="control-group">
 			<div class="controls">
 				<input type="submit" value="Submit" class="btn btn-primary" />
