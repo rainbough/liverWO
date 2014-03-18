@@ -5,6 +5,11 @@ Members.allow({
 	remove: ownsProfile
 });
 
+Members.allow({
+	update: adminUser,
+	remove: adminUser
+})
+
 Members.deny({
 	update: function(userId, member, fieldNames) {
 		//may only edit the following fields:

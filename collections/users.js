@@ -1,3 +1,4 @@
+
 Meteor.methods({
 	user: function(userAttributes) {
 	    var email = userAttributes.email;
