@@ -5,3 +5,20 @@ Template.memberLink.helpers({
 		return a.hostname;
 	}
 });
+
+Template.memberLink.events({
+	'click #edit': function(){
+		var currentMemberId = this._id;
+		Router.go('memberEdit', {_id: currentMemberId });
+		
+	},
+
+	'click #delete': function(e) {
+		e.preventDefault();
+		if(confirm("Delete this member?")) {
+			var currentMemberId = this._id;
+			Members.remove(currentMemberId);
+			Router.go('membersList');
+		}
+	}
+});

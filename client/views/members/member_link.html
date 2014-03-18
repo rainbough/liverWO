@@ -10,5 +10,8 @@
                 <h3><a href="{{pathFor 'memberPage'}}">{{prefix}} {{firstname}} {{lastname}} {{suffix}}</a><span> {{institution1}} {{organization}}</span></h3>
             </div>
         </div>
+        {{#if isInRole 'admin'}}
+            <button type="button" id="delete" class="btn btn-danger navbar-right">Delete</button><button id="edit" type="button" class="btn btn-warning navbar-right">Edit</button>
+        {{/if}}
     </div>
 </template>
