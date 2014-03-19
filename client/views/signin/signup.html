@@ -1,5 +1,4 @@
 <template name="signUp">
-	{{#unless currentUser}}
 		<h3>Create New Account</h3>
 		<form id="register" action="">
 			<div class="control-group">
@@ -26,11 +25,4 @@
 				</div>
 			</div>
 	   </form> 
-	{{/unless}}
-    {{#if currentUser}}
-	   	You are logged in as: <strong>{{email}}</strong>
-
-	   	<div><a id="logout" href="#">Log Out</a></div>
-   {{/if}}
-
 </template>

@@ -27,5 +27,24 @@ Template.signIn.events({
 
     'click #logout': function(){
         Meteor.logout();
+    },
+
+    'click #profile': function(){
+        var user = Meteor.user();
+        var userId = user._id;
+        Meteor.call('memberExists', userId, function(error, id){
+            if (error) {
+                throwError(error.reason);
+                
+                if (error.error === 404)
+                    Router.go('memberNew');
+
+            } else {
+                Router.go('memberEdit', {_id: id});
+            }
+        });
     }
 });
+
+
+
