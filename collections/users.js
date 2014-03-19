@@ -1,10 +1,11 @@
-
+// This method handles field validation for the user account creation.
 Meteor.methods({
 	user: function(userAttributes) {
 	    var email = userAttributes.email;
 	    var password = userAttributes.password;
 	    var password2 = userAttributes.password2;
 
+        // removes whitespace 
 	    var trimInput = function(val) {
         	return val.replace(/^\s*|\s*$/g, "");
       	}
