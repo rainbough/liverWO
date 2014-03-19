@@ -5,4 +5,4 @@ var members = {
 }
 
 Template.membersList.helpers(members);
-Template.adminMemberList.helpers(members);
+Template.adminMembers.helpers(members);
