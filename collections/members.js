@@ -1,5 +1,7 @@
 Members = new Meteor.Collection('members');
 
+// see ownsProfile and adminUser functions in lib/permissions.js
+// This allows client side editing and deleting of member profiles
 Members.allow({
 	update: ownsProfile,
 	remove: ownsProfile
@@ -10,6 +12,9 @@ Members.allow({
 	remove: adminUser
 })
 
+// this restricts client side editing of fields not on this list.
+// It uses _.without to return an array of any updates to fields not listed.
+// Then it checks to see if that array is > 0.
 Members.deny({
 	update: function(userId, member, fieldNames) {
 		//may only edit the following fields:
@@ -48,5 +53,17 @@ Meteor.methods({
 		var memberId = Members.insert(member);
 
 		return memberId;
+	},
+
+	memberExists: function(user_id) {
+		var user = Meteor.user(),
+		memberWithSameId = Members.findOne({userId: user_id});
+		if(memberWithSameId && user_id){
+			return memberWithSameId._id;
+		} else {
+			throw new Meteor.Error(404, 'No Profile exists for this user');
+		}
+
+		
 	}
 });
