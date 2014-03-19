@@ -1,3 +1,5 @@
+//This creates a few basic user accounts and a 3 members if none are present in the database at server start.
+
 if (Members.find().count() === 0) {
 
 	Members.insert({
