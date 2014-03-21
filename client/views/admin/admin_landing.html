@@ -1,5 +1,13 @@
 <template name="adminHome">
-	<h1>This is the Admin landing page!!!</h1>
-	<a href="/members">Member List</a>
+	{{#if isInRole 'admin'}}
+		<h1>This is the Admin landing page!!!</h1>
+		<a href="/members">Member List</a>
+		<br>
+		<hr class="spacer-20">
+		<button class="btn btn-success" id="groupCreate" type="button">New Group</button>
+
+	{{else}}
+		<h1>Redirecting...</h1>
+	{{/if}}
 	
 </template>
