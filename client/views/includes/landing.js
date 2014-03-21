@@ -1,5 +1,5 @@
 Template.home.events({
-	'click button': function() {
+	'click #create': function() {
 		Router.go('/signup');
 	}
 });

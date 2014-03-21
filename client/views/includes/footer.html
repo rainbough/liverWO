@@ -1,4 +1,9 @@
 <template name="footer">
 	<footer>
+		<ul>
+		{{#if isInRole 'admin'}}
+			<li class="footer_link"><a href="{{pathFor 'adminHome'}}">Admin Page</a></li>
+		{{/if}}
+		</ul>
 	</footer>
 </template>
