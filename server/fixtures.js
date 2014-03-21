@@ -6,7 +6,8 @@ if (Members.find().count() === 0) {
 		firstname: 'Tom',
 		lastname: 'Coleman',
 		institution1: 'meteor.com',
-		email: 'tom@example.com'
+		email: 'tom@example.com',
+		profileName: "TColeman"
 	});	
 
 	Members.insert({
@@ -27,7 +28,8 @@ if (Members.find().count() === 0) {
 	  state: "TX",
 	  suffix: "LMT",
 	  title: "Web Developer",
-	  zip: "78681"
+	  zip: "78681",
+	  profileName: "RPhillips"
 	});
 
 
@@ -49,7 +51,8 @@ if (Members.find().count() === 0) {
 	  state: "TX",
 	  suffix: "PHD",
 	  title: "assistant",
-	  zip: "78681"
+	  zip: "78681",
+	  profileName: "JDoe"
 	});
 
 }

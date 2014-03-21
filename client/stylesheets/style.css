@@ -38,7 +38,21 @@ body {
 footer{
 	background: teal;
 }
+footer li{
+	list-style: none;
+	display: inline-block;
+}
+footer li a{
+	color: #fff;
+}
+footer li a:hover{
+	color:#6fdc6f;
+	text-decoration: none;
+}
 
+.footer_link{
+	padding: 10px 5px 10px 5px;
+}
 .psfix{
 	width: 50px;
 }
