@@ -57,6 +57,15 @@ if (Members.find().count() === 0) {
 
 }
 
+if (Groups.find().count() === 0) {
+	Groups.insert({
+		groupName: "ABCGroup"
+	});
+	Groups.insert({
+		groupName: "XYZGroup"
+	});
+}
+
 if (Meteor.users.find().count() === 0) {
 	var users = [
 		{name: "Normal User", email: 'normal@example.com', roles: []},
@@ -77,3 +86,4 @@ if (Meteor.users.find().count() === 0) {
 	});
 
 }
+
