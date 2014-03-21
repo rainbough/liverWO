@@ -62,8 +62,6 @@ Meteor.methods({
 			return memberWithSameId._id;
 		} else {
 			throw new Meteor.Error(404, 'No Profile exists for this user');
-		}
-
-		
+		}	
 	}
 });

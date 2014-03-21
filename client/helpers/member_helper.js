@@ -6,3 +6,4 @@ var members = {
 
 Template.membersList.helpers(members);
 Template.adminMembers.helpers(members);
+Template.memberProfiles.helpers(members);
