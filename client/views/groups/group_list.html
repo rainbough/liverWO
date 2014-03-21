@@ -1,0 +1,10 @@
+<template name="groupList">
+	{{#each groups}}
+		<div class="group">
+			<form method="link" action="{{pathFor 'groupPage'}}">
+			<button type="submit" class="btn btn-success">{{groupName}}</button>
+		</form>
+		</div>
+		<br>
+	{{/each}}
+</template>
