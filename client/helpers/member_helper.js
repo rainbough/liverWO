@@ -1,9 +1,16 @@
-var members = {
+
+Template.membersList.helpers({
 	members: function() {
 		return Members.find(); 
 	}
-}
-
-Template.membersList.helpers(members);
-Template.adminMembers.helpers(members);
-Template.memberProfiles.helpers(members);
+});
+Template.adminMembers.helpers({
+	members: function() {
+		return Members.find(); 
+	}
+});
+Template.memberProfiles.helpers({
+	members: function() {
+		return Members.find(); 
+	}
+});
