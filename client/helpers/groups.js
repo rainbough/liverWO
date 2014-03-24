@@ -1,7 +1,5 @@
-var groups = {
+Template.groupList.helpers({
 	groups: function() {
 		return Groups.find(); 
 	}
-}
-
-Template.groupList.helpers(groups);
+});
