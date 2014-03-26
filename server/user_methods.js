@@ -8,12 +8,11 @@ Meteor.methods({
    * @param {String} targetUserId _id of user to delete
    * @param {String} group Company to update permissions for
    */
-  deleteUser: function (targetUserId, group) {
+  deleteUser: function (targetUserId) {
     var loggedInUser = Meteor.user()
 
     if (!loggedInUser ||
-        !Roles.userIsInRole(loggedInUser, 
-                            ['manage-users','admin'], group)) {
+        !Roles.userIsInRole(loggedInUser, ['admin'])) {
       throw new Meteor.Error(403, "Access denied")
     }
 
@@ -32,16 +31,16 @@ Meteor.methods({
    * @param {Array} roles User's new permissions
    * @param {String} group Company to update permissions for
    */
-  updateRoles: function (targetUserId, roles, group) {
+  updateRoles: function (targetUserId, roles) {
     var loggedInUser = Meteor.user()
 
     if (!loggedInUser ||
         !Roles.userIsInRole(loggedInUser, 
-                            ['manage-users','admin'], group)) {
+                            ['admin'])) {
       throw new Meteor.Error(403, "Access denied")
     }
 
-    Roles.setUserRoles(targetUser, roles, group)
+    Roles.setUserRoles(targetUser, roles)
   }
 })
 

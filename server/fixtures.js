@@ -79,9 +79,14 @@ if (Meteor.users.find().count() === 0) {
 			password: "700appletrees",
 			profile: { name: user.name}
 		});
-
+		var globalGroup = Roles.GLOBAL_GROUP;
 		if (user.roles.length > 0) {
-			Roles.addUsersToRoles(id, user.roles);
+			if(user.name === "Admin"){
+				Roles.addUsersToRoles(id, user.roles);
+			} else{
+
+				Roles.addUsersToRoles(id, user.roles);
+			}
 		}
 	});
 
