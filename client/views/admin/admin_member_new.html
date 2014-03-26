@@ -1,0 +1,137 @@
+<template name="adminMemberNew">
+	<h3>Create Profile</h3>
+	<form class="main">
+		<div class="name-group inline">
+				<div class="control-group">
+					<label class="control-label" for="email">Login Email:</label>
+					<div class="controls">
+						<input type="text" name="email" type="text" value="" placeholder="" />
+					</div>
+				</div>
+			<div class="control-group inline">
+				<label class="control-label" for="prefix">Prefix</label>
+				<div class="controls">
+					<input class="psfix" name="prefix" type="text" value="" placeholder="Dr." />
+				</div>
+			</div>
+			<div class="control-group inline">
+				<label class="control-label" for="firstname">First Name</label>
+				<div class="controls">
+					<input name="firstname" type="text" value="" placeholder="first name" />
+				</div>
+			</div>
+			<div class="control-group inline">
+				<label class="control-label" for="lastname">Last Name</label>
+				<div class="controls">
+					<input name="lastname" type="text" value="" placeholder="last name" />
+				</div>
+			</div>
+			<div class="control-group inline">
+				<label class="control-label" for="suffix">Suffix</label>
+				<div class="controls">
+					<input class="psfix" name="suffix" type="text" value="" placeholder="suffix" />
+				</div>
+			</div>
+			<div class="control-group inline">
+				<label class="control-label" for="title">Title</label>
+				<div class="controls">
+					<input name="title" type="text" value="" placeholder="Professor, assistant, etc." />
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="institution-group inline">
+			<div class="control-group inline">
+				<label class="control-label" for="institution1">Institution 1</label>
+				<div class="controls">
+					<input name="institution1" type="text" value="" placeholder="organization name" />
+				</div>
+			</div>
+			<div class="control-group inline">
+				<label class="control-label" for="institution2">Institution 2</label>
+				<div class="controls">
+					<input name="institution2" type="text" value="" placeholder="organization name" />
+				</div>
+			</div>
+			<div class="control-group inline">
+				<label class="control-label" for="institution3">Institution 3</label>
+				<div class="controls">
+					<input name="institution3" type="text" value="" placeholder="organization name" />
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="control-group inline">
+				<label class="control-label" for="imageUrl">Photo Url</label>
+				<div class="controls">
+					<input name="image_url" type="text" value="" placeholder="image url" />
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="inline address-group">
+			<div class="control-group">
+				<label class="control-label" for="address1">Lab Name</label>
+				<div class="controls">
+					<input name="labName" type="text" value="" placeholder="" />
+				</div>
+			</div>
+			<div class="inline">
+				<div class="control-group inline">
+					<label class="control-label" for="address1">Lab Address</label>
+					<div class="controls">
+						<input name="address1" type="text" value="" placeholder="" />
+					</div>
+				</div>
+				<div class="control-group inline">
+					<label class="control-label" for="address2">Lab Address line 2</label>
+					<div class="controls">
+						<input name="address2" type="text" value="" placeholder="" />
+					</div>
+				</div>
+			</div>
+			<div class="inline">
+				<div class="control-group inline">
+					<label class="control-label" for="city">City</label>
+					<div class="controls">
+						<input name="city" type="text" value="" placeholder="" />
+					</div>
+				</div>
+				<div class="control-group inline">
+					<label class="control-label" for="state">State</label>
+					<div class="controls">
+						<input class="psfix" name="state" type="text" value="" placeholder="TX, etc." />
+					</div>
+				</div>
+				<div class="control-group inline">
+					<label class="control-label" for="zip">Zip Code</label>
+					<div class="controls">
+						<input class="psfix" name="zip" type="text" value="" placeholder="" />
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="control-group inline">
+				<label class="control-label" for="country">Country</label>
+				<div class="controls">
+					<input name="country" type="text" value="" placeholder="United States" />
+				</div>
+			</div>
+			<div class="control-group inline">
+				<label class="control-label" for="phone">Lab Phone</label>
+				<div class="controls">
+					<input name="phone" type="text" value="" placeholder="(555) 555-5555" />
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" value="Submit" class="btn btn-primary" />
+			</div>
+		</div>
+	</form>
+</template>

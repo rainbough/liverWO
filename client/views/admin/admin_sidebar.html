@@ -1,0 +1,14 @@
+<template name="adminSidebar">
+	{{#if isInRole 'admin'}}
+		<div class="side-bar-container">
+			<div class="sidebar">
+				<ul class="adminLinks">
+					<li><a href="{{pathFor 'adminMemberNew'}}">New Member</a></li>
+					<li><a href="{{pathFor 'newGroup'}}">New Group</a></li>
+					<li><a href="{{pathFor 'membersList'}}">View Members</a></li>
+					<li><a href="{{pathFor 'groupList'}}">View Groups</a></li>
+				</ul>
+			</div>
+		</div>
+	{{/if}}
+</template>
