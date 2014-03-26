@@ -1,3 +1,7 @@
 <template name="groupPage">
 	<h3>This is the home page for {{groupName}}</h3>
+	{{#if permittedRoles}}
+		<h3>Hidden contents for this group.</h3>
+		<p>This Content should be hidden unless you are a member of {{groupName}}!</p>
+	{{/if}}
 </template>

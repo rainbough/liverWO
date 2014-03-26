@@ -4,7 +4,21 @@ Template.newGroup.events({
 
 		var group = {
 			groupName: $(e.target).find("[name=groupName]").val(),
-			groupAdminEmail: $(e.target).find("[name=groupAdminEmail]").val()
+			user: $(e.target).find("[name=user]").val()
 		}
+
+		Meteor.call('newGroup', group, function(error, id){
+			if (error) {
+					throwError(error.reason);
+					
+					if (error.error === 302)
+						Router.go('groupPage', {groupName: error.details})
+				} else {
+					var newGroup = Groups.findOne({_id: id});
+					var newGroupName = newGroup.groupName;
+					Router.go('groupPage', {groupName: newGroupName});
+				}
+
+		});
 	}
 });
