@@ -50,12 +50,14 @@ footer li a:hover{
 	color:#6fdc6f;
 	text-decoration: none;
 }
-
+.main{
+	margin-right: 40px;
+}
  /* Admin Sidebar Start*/
 .sidebar{
 	background: #222;
 	height: 100%;
-	width: 170px;
+	width: 100px;
 	float: left;
 	position: fixed;
 	z-index: 999;
@@ -63,6 +65,7 @@ footer li a:hover{
 .sidebar li{
 	list-style: none;
 	color: #fff;
+	font-size: 11px;
 }
 .sidebar li a{
 	color: #fff;
@@ -71,7 +74,7 @@ footer li a:hover{
 	margin-top: 40px;
 }
 .adminLinks li{
-	margin:20px 0 10px 0;
+	margin:20px 0 10px -30px;
 }
 .adminLinks li a:hover{
 	color:#6fdc6f;
