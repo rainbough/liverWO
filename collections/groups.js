@@ -1,5 +1,10 @@
+// Create Groups collection
 Groups = new Meteor.Collection('groups');
 
+// This is for creating a new group it is called on the group_submit.js page
+// It checks for the presence of a user email and a group name. 
+// It also checks to see if the groupname already exists for another group.
+// It also verifies that the user email is a currently registered user. 
 Meteor.methods({
 	newGroup: function(groupInfo){
 		var groupName = groupInfo.groupName;
@@ -10,7 +15,8 @@ Meteor.methods({
         	return val.replace(/\s+/g,'');
       	}
       	console.log(userExists);
-
+      	
+      	// this removes whitespace from the groupname for use as a url/route
   		var trimGroupName = trimInput(groupName);
 
 		if(!groupName)
