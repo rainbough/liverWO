@@ -1,0 +1,86 @@
+<template name="memberSignUp">
+    <div class="member">
+        {{#if ownProfile}}
+            <div class="pull-right"><a href="{{_id}}/edit">Edit Profile</a></div>
+        {{/if}}
+        {{#if isInRole 'admin'}}
+            <div class="navbar-right">
+                <button type="button" id="delete" class="btn btn-danger navbar-right">Delete</button><button id="edit" type="button" class="btn btn-warning navbar-right">Edit</button>
+            </div>
+        {{/if}}
+        <div class="member-profile">
+            <div class="profile">
+                <h2>{{prefix}} {{firstname}} {{lastname}} {{suffix}}</h2>
+                <div class="title-group inline">
+                    <h3><span> {{organization}}</span></h3>
+                    {{#if title}}
+                        <h4>{{title}}</h4>
+                    {{/if}}
+                </div>
+                {{#if imageUrl}}
+                    <div class="profile-pic-large pull-right inline">
+                        <img src="{{imageUrl}}" />
+                    </div>
+                {{/if}}
+                <br>
+                {{#if institution1}}
+                    <div class="affiliations inline">
+                        <h5>Affiliations:</h5>
+                        <p>{{institution1}}</p> 
+                        {{#if institution2}}
+                            <p>{{institution2}}</p>
+                        {{/if}} 
+                        {{#if institution3}}
+                            <p>{{institution3}}</p>
+                        {{/if}}
+                    </div>
+                {{/if}}
+            </div>
+            {{#if labName}}
+                <div class="lab-group inline">
+                    <h4>{{labName}}</h4>
+                    {{#if labAddress1}}
+                        <p>{{labAddress1}} {{labAddress2}}</p>
+                        <p>{{city}}, {{state}} {{zip}}</p>
+                        <p>{{country}}</p>
+                    {{/if}}
+                    {{#if labPhone}}
+                        <h5>Phone: {{labPhone}}</h5>
+                    {{/if}}
+                </div>
+            {{/if}}
+            {{#if email}}
+                <div><strong>Contact: </strong><p>{{email}}</p></div>
+            {{/if}}
+        </div>
+    </div>
+    <h3>Create New User Account for {{prefix}} {{firstname}}  {{lastname}}</h3>
+    <form id="register" action="">
+        <input name="memberId" class="hidden" value="{{_id}}" />
+        <div class="control-group">
+            <label class="control-label" for="email">Email</label>
+            <br>
+            <input name="email" type="email" value="" placeholder="email@example.com" />
+        </div>
+        <br>
+        <div class="control-group">
+            <label class="control-label" for="password">Enter Password</label>
+            <br>
+            <input name="password" type="password" value="" placeholder="" />
+        </div>
+        <br>
+        <div class="control-group">
+            <label class="control-label" for="password">Re-enter Password</label>
+            <br>
+            <input name="password2" type="password" value="" placeholder="" />
+        </div>
+        <br>
+        <div class="control-group">
+            <div class="controls">
+                <input type="submit" value="Create an Account" class="btn btn-primary" />
+            </div>
+        </div>
+    </form> 
+    <br>
+    <br>
+</template>
