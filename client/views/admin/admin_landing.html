@@ -1,8 +1,10 @@
 <template name="adminHome">
+	<!-- Show content if logged in user is an admin -->
 	{{#if isInRole 'admin'}}
 		<h1>Admin Dashboard</h1>
 		
 	{{else}}
+	<!-- Show "redirecting" as page redirects for non-admin users -->
 		<h1>Redirecting...</h1>
 	{{/if}}
 	
