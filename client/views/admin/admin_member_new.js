@@ -1,8 +1,8 @@
-Template.memberEdit.events({
+Template.adminMemberNew.events({
 	'submit form': function(e) {
 		e.preventDefault();
-		var currentMemberId = this._id;
-		var memberProperties = {
+
+		var member = {
 			routeName: $(e.target).find('[name=routeName]').val(),
 			title: $(e.target).find('[name=title]').val(),
 			prefix: $(e.target).find('[name=prefix]').val(),
@@ -13,6 +13,7 @@ Template.memberEdit.events({
 			institution2: $(e.target).find('[name=institution2]').val(),
 			institution3: $(e.target).find('[name=institution3]').val(),
 			imageUrl: $(e.target).find('[name=image_url]').val(),
+			email: $(e.target).find('[name=email]').val(),
 			labPhone: $(e.target).find('[name=phone]').val(),
 			labName: $(e.target).find('[name=labName]').val(),
 			labAddress1: $(e.target).find('[name=address1]').val(),
@@ -23,22 +24,17 @@ Template.memberEdit.events({
 			country: $(e.target).find('[name=country]').val()
 		}
 
-		Members.update(currentMemberId, {$set: memberProperties}, function(error) {
+		Meteor.call('member', member, function(error, id) { 
 			if (error) {
 				throwError(error.reason);
+				
+				if (error.error === 302)
+					Router.go('memberPage', {_id: error.details})
 			} else {
-				Router.go('memberPage', {_id: currentMemberId});
+				var newMember = Members.findOne({_id: id});
+				var newMemberRoute = newMember.routeName;
+				Router.go('adminEmailNewMember', {routeName: newMemberRoute});
 			}
 		});
-		
-	},
-	'click .delete': function(e) {
-		e.preventDefault();
-		if(confirm("Delete this member?")) {
-			var currentMemberId = this._id;
-			Members.remove(currentMemberId);
-			Router.go('membersList');
-		}
 	}
 });
-

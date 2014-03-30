@@ -6,6 +6,14 @@
 				<label class="control-label" for="username">Username: <strong>{{username}}</strong></label>
 			</div>
 			{{/if}}
+			{{#if isInRole 'admin'}}
+			<div class="control-group">
+				<label class="control-label" for="routeName">Route Name:</label>
+				<div class="controls">
+					<input type="text" name="routeName" type="text" value="" placeholder="" />
+				</div>
+			</div>
+			{{/if}}
 			<div class="control-group inline">
 				<label class="control-label" for="prefix">Prefix</label>
 				<div class="controls">
