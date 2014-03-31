@@ -9,4 +9,4 @@ var email = {
 Template.signIn.helpers(email);
 Template.header.helpers(email);
 Template.signUp.helpers(email);
-Template.memberNew.helpers(email);
+// Template.memberNew.helpers(email);
