@@ -18,7 +18,7 @@ Members.allow({
 Members.deny({
 	update: function(userId, member, fieldNames) {
 		//may only edit the following fields:
-		return (_.without(fieldNames, 'routeName', 'firstname', 'lastname', 'suffix', 'prefix', 'institution1', 'institution2', 'institution3', 'labName', 'labAddress1', 'email', 'title', 'labAddress2', 'city', 'state', 'zip', 'labPhone', 'country', 'imageUrl').length > 0);
+		return (_.without(fieldNames, 'RIkeywords','routeName', 'firstname', 'lastname', 'suffix', 'prefix', 'institution1', 'institution2', 'institution3', 'labName', 'labAddress1', 'email', 'title', 'labAddress2', 'city', 'state', 'zip', 'labPhone', 'country', 'imageUrl', 'labAssociates').length > 0);
 	}
 });
 
@@ -44,8 +44,8 @@ Meteor.methods({
 				'A profile is already associated with this email.',
 				memberWithSameEmail._id);
 		}
-		var member = _.extend(_.pick(memberAttributes, 'user_id', 'routeName', 'email', 'firstname', 'lastname', 'suffix', 'prefix', 'institution1', 'institution2', 'institution3', 'labName', 
-				'labAddress1', 'title', 'labAddress2', 'city', 'state', 'zip', 'labPhone', 'country', 'imageUrl' ), {
+		var member = _.extend(_.pick(memberAttributes, 'RIkeywords','user_id', 'routeName', 'email', 'firstname', 'lastname', 'suffix', 'prefix', 'institution1', 'institution2', 'institution3', 'labName', 
+				'labAddress1', 'title', 'labAddress2', 'city', 'state', 'zip', 'labPhone', 'country', 'imageUrl', 'labAssociates' ), {
 			submitted: new Date().getTime()
 		});
 
