@@ -24,19 +24,17 @@
 		<!-- Suffix -->
 		<label class="control-label" for="suffix">Suffix</label>
 		<input class="psfix" name="suffix" type="text" value="" placeholder="suffix" />
-		<hr>
 		<!-- Title -->
 		<label class="control-label" for="title">Title</label>
 		<input name="title" type="text" value="" placeholder="Professor, assistant, etc." />
+		<hr>
 		<!-- Institution 1 -->
-		<label class="control-label" for="institution1">Institution 1</label>
-		<input name="institution1" type="text" value="" placeholder="organization name" />
-		<!-- Institution 2 -->
-		<label class="control-label" for="institution2">Institution 2</label>
-		<input name="institution2" type="text" value="" placeholder="organization name" />
-		<!-- Institution 3 -->
-		<label class="control-label" for="institution3">Institution 3</label>
-		<input name="institution3" type="text" value="" placeholder="organization name" />
+		<div class="institution_group">
+			<label class="control-label" for="institutions">Institutions</label>
+			<input name="institutions" class="institutions" type="text" value="" placeholder="organization name" />
+		</div>
+		<br>
+		<button id="add_institutions" type="text" class="btn-danger btn">Add Institutions</button>
 		<hr>
 		<!-- Lab Name -->
 		<label class="control-label" for="address1">Lab Name</label>
@@ -68,22 +66,21 @@
 		<label class="control-label" for="research_interests">Research Interests (keywords)</label>
 		<input name="RIkeywords" type="text" value="" placeholder="" />
 		<!-- Professional Associations -->
-		<label class="control-label" for="associations">Professional Associations</label>
-		<input name="associations" type="text" value="" placeholder="" />
-		<!-- Lab Associates -->
-		<label class="control-label" for="lab_associates">Lab Associates</label>
-		<input name="lab_associates" type="text" value="" placeholder="" />
-
-		<label class="control-label" for="labAssociates">Associate 1</label>
-		<input class="associates" name="labAssociates" type="text" value="as1" placeholder="" />
-		<!-- Professional Associations -->
-		<label class="control-label" for="labAssociates">Associate 2</label>
-		<input class="associates" name="labAssociates" type="text" value="as2" placeholder="" />
-		<!-- Lab Associates -->
-		<label class="control-label" for="labAssociates">Associate 3</label>
-		<input class="associates" name="labAssociates" type="text" value="as3" placeholder="" />
 		<hr>
-		<input type="submit" value="Submit" class="btn btn-primary" />
+		<div class="associations_group">
+			<label class="control-label" for="associations">Professional Associations</label>
+			<input name="associations" type="text" value="" placeholder="" />
+		</div>
+		<button id="add_associations" class="btn-danger btn">Add Associations</button>
+		<!-- Lab Associates -->
+		<hr>
+		<div class="associates_group">
+			<label class="control-label" for="labAssociates">Lab Associates</label>
+			<input class="associates" name="labAssociates" type="text" value="as1" placeholder="" />
+		</div>
+		<button id="add_associates" class="btn-danger btn">Add Lab Associates</button>
+		<hr>
+		<input id="form_submit" type="submit" value="Submit" class="btn btn-primary" />
 
 	</form>
 </template>

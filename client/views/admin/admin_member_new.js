@@ -13,9 +13,7 @@ Template.adminMemberNew.events({
 			firstname: $(e.target).find('[name=firstname]').val(),
 			lastname: $(e.target).find('[name=lastname]').val(),
 			suffix: $(e.target).find('[name=suffix]').val(),
-			institution1: $(e.target).find('[name=institution1]').val(),
-			institution2: $(e.target).find('[name=institution2]').val(),
-			institution3: $(e.target).find('[name=institution3]').val(),
+			institutions: getArray('institutions'),
 			email: $(e.target).find('[name=email]').val(),
 			labPhone: $(e.target).find('[name=phone]').val(),
 			labName: $(e.target).find('[name=labName]').val(),
@@ -25,10 +23,10 @@ Template.adminMemberNew.events({
 			state: $(e.target).find('[name=state]').val(),
 			zip: $(e.target).find('[name=zip]').val(),
 			country: $(e.target).find('[name=country]').val(),
-			RIkeywords: $(e.target).find('[name=RIkeywords]').val(),
-			newitem: $(e.target).find('[name=newitem]').val(),
-			newitem2: $(e.target).find('[name=newitem2]').val(),
+			riKeywords: $(e.target).find('[name=riKeywords]').val(),
+			associations: getArray('associations'),
 			labAssociates: getArray('associates')
+
 		}
 	
 			
@@ -45,6 +43,20 @@ Template.adminMemberNew.events({
 				Router.go('adminEmailNewMember', {routeName: newMemberRoute});
 			}
 		});
+	},
+	// These add input fields for additional associations, associatiates, institutions
+	'click #add_institutions': function(e){
+		e.preventDefault();
+		$('.institution_group').append('<input name="institutions" class="institutions" type="text" value="" placeholder="organization name" />');
+	},
+	'click #add_associates': function(e){
+		e.preventDefault();
+		$('.associates_group').append('<input class="associates" name="labAssociates" type="text" value="" placeholder="associate name" />');
+
+	},
+	'click #add_associations': function(e){
+		e.preventDefault();
+		$('.associations_group').append('<input class="associations" name="associations" type="text" value="" placeholder="association name" />');
 	}
 });
 
