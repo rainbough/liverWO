@@ -3,8 +3,9 @@
 	<form class="main">
 		<hr>
 		<!-- Specify a name for the url that will have this member's profile -->
+		<p style="color:red;">If the route name field is empty it will throw an error... validation code coming soon.</p>
 		<label class="control-label" for="routeName">Route Name:</label>
-		<input type="text" name="routeName" value="testroute" placeholder="" />
+		<input type="text" name="routeName" value="FakeRoute" placeholder="" />
 		<!-- Email address to associate with this user -->
 		<label class="control-label" for="email2">Email:</label>
 		<input type="email" name="email2" value="" placeholder="" />
@@ -17,10 +18,10 @@
 		<input class="psfix" name="prefix" type="text" value="" placeholder="Dr." />
 		<!-- First Name -->
 		<label class="control-label" for="firstname">First Name</label>
-		<input name="firstname" type="text" value="fakefirst" placeholder="first name" />
+		<input name="firstname" type="text" value="" placeholder="first name" />
 		<!-- Last Name -->
 		<label class="control-label" for="lastname">Last Name</label>
-		<input name="lastname" type="text" value="fakelast" placeholder="last name" />
+		<input name="lastname" type="text" value="" placeholder="last name" />
 		<!-- Suffix -->
 		<label class="control-label" for="suffix">Suffix</label>
 		<input class="psfix" name="suffix" type="text" value="" placeholder="suffix" />
@@ -71,13 +72,15 @@
 			<label class="control-label" for="associations">Professional Associations</label>
 			<input name="associations" type="text" value="" placeholder="" />
 		</div>
+		<br>
 		<button id="add_associations" class="btn-danger btn">Add Associations</button>
 		<!-- Lab Associates -->
 		<hr>
 		<div class="associates_group">
 			<label class="control-label" for="labAssociates">Lab Associates</label>
-			<input class="associates" name="labAssociates" type="text" value="as1" placeholder="" />
+			<input class="associates" name="labAssociates" type="text" value="" placeholder="" />
 		</div>
+		<br>
 		<button id="add_associates" class="btn-danger btn">Add Lab Associates</button>
 		<hr>
 		<input id="form_submit" type="submit" value="Submit" class="btn btn-primary" />
