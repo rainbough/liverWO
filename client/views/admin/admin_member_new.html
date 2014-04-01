@@ -1,137 +1,89 @@
 <template name="adminMemberNew">
 	<h3>Create Member Profile</h3>
 	<form class="main">
-		<div class="name-group inline">
-				<div class="control-group">
-					<label class="control-label" for="routeName">Route Name:</label>
-					<div class="controls">
-						<input type="text" name="routeName" value="" placeholder="" />
-					</div>
-				</div>
-			<div class="control-group inline">
-				<label class="control-label" for="prefix">Prefix</label>
-				<div class="controls">
-					<input class="psfix" name="prefix" type="text" value="" placeholder="Dr." />
-				</div>
-			</div>
-			<div class="control-group inline">
-				<label class="control-label" for="firstname">First Name</label>
-				<div class="controls">
-					<input name="firstname" type="text" value="" placeholder="first name" />
-				</div>
-			</div>
-			<div class="control-group inline">
-				<label class="control-label" for="lastname">Last Name</label>
-				<div class="controls">
-					<input name="lastname" type="text" value="" placeholder="last name" />
-				</div>
-			</div>
-			<div class="control-group inline">
-				<label class="control-label" for="suffix">Suffix</label>
-				<div class="controls">
-					<input class="psfix" name="suffix" type="text" value="" placeholder="suffix" />
-				</div>
-			</div>
-			<div class="control-group inline">
-				<label class="control-label" for="title">Title</label>
-				<div class="controls">
-					<input name="title" type="text" value="" placeholder="Professor, assistant, etc." />
-				</div>
-			</div>
-		</div>
-		<br>
-		<br>
-		<div class="institution-group inline">
-			<div class="control-group inline">
-				<label class="control-label" for="institution1">Institution 1</label>
-				<div class="controls">
-					<input name="institution1" type="text" value="" placeholder="organization name" />
-				</div>
-			</div>
-			<div class="control-group inline">
-				<label class="control-label" for="institution2">Institution 2</label>
-				<div class="controls">
-					<input name="institution2" type="text" value="" placeholder="organization name" />
-				</div>
-			</div>
-			<div class="control-group inline">
-				<label class="control-label" for="institution3">Institution 3</label>
-				<div class="controls">
-					<input name="institution3" type="text" value="" placeholder="organization name" />
-				</div>
-			</div>
-			<br>
-			<br>
-			<div class="control-group inline">
-				<label class="control-label" for="imageUrl">Photo Url</label>
-				<div class="controls">
-					<input name="image_url" type="text" value="" placeholder="image url" />
-				</div>
-			</div>
-		</div>
-		<br>
-		<br>
-		<div class="inline address-group">
-			<div class="control-group">
-				<label class="control-label" for="address1">Lab Name</label>
-				<div class="controls">
-					<input name="labName" type="text" value="" placeholder="" />
-				</div>
-			</div>
-			<div class="inline">
-				<div class="control-group inline">
-					<label class="control-label" for="address1">Lab Address</label>
-					<div class="controls">
-						<input name="address1" type="text" value="" placeholder="" />
-					</div>
-				</div>
-				<div class="control-group inline">
-					<label class="control-label" for="address2">Lab Address line 2</label>
-					<div class="controls">
-						<input name="address2" type="text" value="" placeholder="" />
-					</div>
-				</div>
-			</div>
-			<div class="inline">
-				<div class="control-group inline">
-					<label class="control-label" for="city">City</label>
-					<div class="controls">
-						<input name="city" type="text" value="" placeholder="" />
-					</div>
-				</div>
-				<div class="control-group inline">
-					<label class="control-label" for="state">State</label>
-					<div class="controls">
-						<input class="psfix" name="state" type="text" value="" placeholder="TX, etc." />
-					</div>
-				</div>
-				<div class="control-group inline">
-					<label class="control-label" for="zip">Zip Code</label>
-					<div class="controls">
-						<input class="psfix" name="zip" type="text" value="" placeholder="" />
-					</div>
-				</div>
-			</div>
-			<br>
-			<div class="control-group inline">
-				<label class="control-label" for="country">Country</label>
-				<div class="controls">
-					<input name="country" type="text" value="" placeholder="United States" />
-				</div>
-			</div>
-			<div class="control-group inline">
-				<label class="control-label" for="phone">Lab Phone</label>
-				<div class="controls">
-					<input name="phone" type="text" value="" placeholder="(555) 555-5555" />
-				</div>
-			</div>
-		</div>
-		<br>
-		<br>
-		<div class="control-group">
-			<div class="controls">
-				<input type="submit" value="Submit" class="btn btn-primary" />
-			</div>
-		</div>
+		<hr>
+		<!-- Specify a name for the url that will have this member's profile -->
+		<label class="control-label" for="routeName">Route Name:</label>
+		<input type="text" name="routeName" value="testroute" placeholder="" />
+		<!-- Email address to associate with this user -->
+		<label class="control-label" for="email2">Email:</label>
+		<input type="email" name="email2" value="" placeholder="" />
+		<!-- Photo Url -->
+		<label class="control-label" for="imageUrl">Photo Url</label>
+		<input name="image_url" type="url" value="" placeholder="image url" />
+		<hr>
+		<!-- Prefix -->
+		<label class="control-label" for="prefix">Prefix</label>
+		<input class="psfix" name="prefix" type="text" value="" placeholder="Dr." />
+		<!-- First Name -->
+		<label class="control-label" for="firstname">First Name</label>
+		<input name="firstname" type="text" value="fakefirst" placeholder="first name" />
+		<!-- Last Name -->
+		<label class="control-label" for="lastname">Last Name</label>
+		<input name="lastname" type="text" value="fakelast" placeholder="last name" />
+		<!-- Suffix -->
+		<label class="control-label" for="suffix">Suffix</label>
+		<input class="psfix" name="suffix" type="text" value="" placeholder="suffix" />
+		<hr>
+		<!-- Title -->
+		<label class="control-label" for="title">Title</label>
+		<input name="title" type="text" value="" placeholder="Professor, assistant, etc." />
+		<!-- Institution 1 -->
+		<label class="control-label" for="institution1">Institution 1</label>
+		<input name="institution1" type="text" value="" placeholder="organization name" />
+		<!-- Institution 2 -->
+		<label class="control-label" for="institution2">Institution 2</label>
+		<input name="institution2" type="text" value="" placeholder="organization name" />
+		<!-- Institution 3 -->
+		<label class="control-label" for="institution3">Institution 3</label>
+		<input name="institution3" type="text" value="" placeholder="organization name" />
+		<hr>
+		<!-- Lab Name -->
+		<label class="control-label" for="address1">Lab Name</label>
+		<input name="labName" type="text" value="" placeholder="" />
+		<!-- Lab Address -->
+		<label class="control-label" for="address1">Lab Address</label>
+		<input name="address1" type="text" value="" placeholder="" />
+		<!-- Lab Address line 2 -->
+		<label class="control-label" for="address2">Lab Address line 2</label>
+		<input name="address2" type="text" value="" placeholder="" />
+		<hr>
+		<!-- City -->
+		<label class="control-label" for="city">City</label>
+		<input name="city" type="text" value="" placeholder="" />
+		<!-- State -->
+		<label class="control-label" for="state">State</label>
+		<input class="psfix" name="state" type="text" value="" placeholder="TX, etc." />
+		<!-- Zip -->
+		<label class="control-label" for="zip">Zip</label>
+		<input class="psfix" name="zip" type="text" value="" placeholder="" />
+		<!-- Country -->
+		<label class="control-label" for="country">Country</label>
+		<input name="country" type="text" value="" placeholder="United States" />
+		<!-- Lab Phone -->
+		<label class="control-label" for="phone">Lab Phone</label>
+		<input name="phone" type="text" value="" placeholder="(555) 555-5555" />
+		<hr>
+		<!-- Research Interests Keywords -->
+		<label class="control-label" for="research_interests">Research Interests (keywords)</label>
+		<input name="RIkeywords" type="text" value="" placeholder="" />
+		<!-- Professional Associations -->
+		<label class="control-label" for="associations">Professional Associations</label>
+		<input name="associations" type="text" value="" placeholder="" />
+		<!-- Lab Associates -->
+		<label class="control-label" for="lab_associates">Lab Associates</label>
+		<input name="lab_associates" type="text" value="" placeholder="" />
+
+		<label class="control-label" for="labAssociates">Associate 1</label>
+		<input class="associates" name="labAssociates" type="text" value="as1" placeholder="" />
+		<!-- Professional Associations -->
+		<label class="control-label" for="labAssociates">Associate 2</label>
+		<input class="associates" name="labAssociates" type="text" value="as2" placeholder="" />
+		<!-- Lab Associates -->
+		<label class="control-label" for="labAssociates">Associate 3</label>
+		<input class="associates" name="labAssociates" type="text" value="as3" placeholder="" />
+		<hr>
+		<input type="submit" value="Submit" class="btn btn-primary" />
+
 	</form>
 </template>
