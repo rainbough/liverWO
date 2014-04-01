@@ -18,7 +18,7 @@ Members.allow({
 Members.deny({
 	update: function(userId, member, fieldNames) {
 		//may only edit the following fields:
-		return (_.without(fieldNames, 'riKeywords','routeName', 'firstname', 'lastname', 'suffix', 'prefix', 'institution1', 'institution2', 'institution3', 'labName', 'labAddress1', 'email', 'title', 'labAddress2', 'city', 'state', 'zip', 'labPhone', 'country', 'imageUrl', 'labAssociates').length > 0);
+		return (_.without(fieldNames, 'email2','riKeywords','routeName', 'firstname', 'lastname', 'suffix', 'prefix', 'institution1', 'institution2', 'institution3', 'labName', 'labAddress1', 'email', 'title', 'labAddress2', 'city', 'state', 'zip', 'labPhone', 'country', 'imageUrl', 'labAssociates').length > 0);
 	}
 });
 
@@ -27,26 +27,37 @@ Meteor.methods({
 		var user = Meteor.user(),
 		memberWithSameEmail = Members.findOne({ email: memberAttributes.email });
 
+		var trimInput = function(val) {
+        	return val.replace(/\s+/g,'');
+      	}
+      	var trimRouteName = trimInput(memberAttributes.routeName);
+
+      	var uniqueRouteName = Members.findOne({routeName: trimRouteName});
 		// ensure the user is logged in
 		if (!user)
 			throw new Meteor.Error(401, "You need to login to Create a New Member Profile");
-
+		if(!memberAttributes.routeName)
+			throw new Meteor.Error(422, "Please Enter a route name.")
 		// ensure members have names
-		if (!memberAttributes.lastname)
-			throw new Meteor.Error(422, 'Please fill in the last name field.');
-
 		if (!memberAttributes.firstname)
 			throw new Meteor.Error(422, 'Please fill in the first name field.');
 
+		if (!memberAttributes.lastname)
+			throw new Meteor.Error(422, 'Please fill in the last name field.');
+
+		if(uniqueRouteName)
+			throw new Meteor.Error(301, 'The route name ' + memberAttributes.routeName + " already exists.")
+		
 		// check that there are no current members with same email
 		if (memberAttributes.email && memberWithSameEmail) {
 			throw new Meteor.Error(302, 
 				'A profile is already associated with this email.',
 				memberWithSameEmail._id);
 		}
-		var member = _.extend(_.pick(memberAttributes,'user_id', 'routeName', 'email', 'firstname', 'lastname', 'suffix', 'prefix', 'institutions', 'associations', 'labName', 
+		var member = _.extend(_.pick(memberAttributes, 'email2','user_id', 'email', 'firstname', 'lastname', 'suffix', 'prefix', 'institutions', 'associations', 'labName', 
 				'labAddress1', 'title', 'labAddress2', 'city', 'state', 'zip', 'labPhone', 'country', 'imageUrl','riKeywords', 'labAssociates' ), {
-			submitted: new Date().getTime()
+			submitted: new Date().getTime(),
+			routeName: trimRouteName
 		});
 
 		var memberId = Members.insert(member);
