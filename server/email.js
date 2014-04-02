@@ -15,8 +15,8 @@ Meteor.methods({
 		Email.send({
 			from: 'contact@WholeOrgan.org',
 			to: email_attributes.email_recipient,
-			subject: "Another Test Email from whole Organ",
-			html: "<p>Hi " + email_attributes.member_name + " Please follow" + "<a href='"+ email_link +"'>this link</a> to complete sign up with Liver.WholeOrgan.org.</p>"
+			subject: "Testing... New Member Request",
+			html: "<p>Hi " + email_attributes.member_name + " Please follow " + "<a href='"+ email_link +"'>this link</a> to complete sign up with WholeOrgan.org.</p>"
 		});
 	}
 });
