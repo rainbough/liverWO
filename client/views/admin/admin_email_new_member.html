@@ -1,6 +1,15 @@
 <template name="adminEmailNewMember">
-	{{> memberSignUp}}
+	<div class="panel panel-success">
+		<div class="panel-heading">
+			<h3 class="panel-title">Preview Page</h3>
+		</div>
+		<div class="panel-body">
+			{{> memberSignUp}}
+		</div>
+	</div>
+	<h4>Send this profile page to potential member:</h4>
 	<label>Member Email</label>
 	<input name="recipient_email" id="recipient" type="text" for="recipent_email">
 	<button class="btn btn-success" id="send_email">Send Email</button>
+	<hr>
 </template>

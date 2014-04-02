@@ -11,7 +11,6 @@ Template.adminEmailNewMember.events({
 
 		}
 
-		console.log(email_attributes);
 		Meteor.call('sendMemberSignUp', email_attributes, function(error, id){
 			if (error) {
 				throwError(error.reason);
