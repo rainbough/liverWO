@@ -18,7 +18,7 @@ Members.allow({
 Members.deny({
 	update: function(userId, member, fieldNames) {
 		//may only edit the following fields:
-		return (_.without(fieldNames, 'email2','riKeywords','routeName', 'firstname', 'lastname', 'suffix', 'prefix', 'institution1', 'institution2', 'institution3', 'labName', 'labAddress1', 'email', 'title', 'labAddress2', 'city', 'state', 'zip', 'labPhone', 'country', 'imageUrl', 'labAssociates').length > 0);
+		return (_.without(fieldNames, 'user_id', 'email2','riKeywords','routeName', 'firstname', 'lastname', 'suffix', 'prefix', 'institution1', 'institution2', 'institution3', 'labName', 'labAddress1', 'email', 'title', 'labAddress2', 'city', 'state', 'zip', 'labPhone', 'country', 'imageUrl', 'labAssociates').length > 0);
 	}
 });
 
@@ -67,7 +67,7 @@ Meteor.methods({
 
 	memberExists: function(user_id) {
 		var user = Meteor.user(),
-		memberWithSameId = Members.findOne({userId: user_id});
+		memberWithSameId = Members.findOne({user_id: user_id});
 		if(memberWithSameId && user_id){
 			return memberWithSameId._id;
 		} else {

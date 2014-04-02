@@ -1,6 +1,6 @@
 Template.memberProfile.helpers({
-	ownProfile: function() {
-		return this.userId == Meteor.userId();
+	ownsProfile: function() {
+		return this.user_id == Meteor.userId();
 	}
 });
 
@@ -16,7 +16,7 @@ Template.memberProfile.events({
 		if(confirm("Delete this member?")) {
 			var currentMemberId = this._id;
 			Members.remove(currentMemberId);
-			Router.go('membersList');
+			Router.go('membersProfile');
 		}
 	}
 });

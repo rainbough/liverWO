@@ -1,4 +1,4 @@
-Template.signUp.events({
+Template.memberSignUp.events({
 
     'submit form' : function(e){
         e.preventDefault();
@@ -6,18 +6,22 @@ Template.signUp.events({
         var user = {
             email: $(e.target).find('[name=email]').val(),
             password: $(e.target).find('[name=password]').val(),
-            password2: $(e.target).find('[name=password2]').val()
+            password2: $(e.target).find('[name=password2]').val(),
+            memberId: this._id
         }
 
-        Meteor.call('user', user, function(error) { 
+        Meteor.call('user', user, function(error, id) { 
             // If validation passes, supply the appropriate fields to the
             // Meteor.loginWithPassword() function.
+            var memberId = user.memberId;
             if (error) {
                 throwError(error.reason);
             } else {
                 Meteor.loginWithPassword(user.email, user.password);
-                Router.go('memberNew');
+                Router.go('memberPage', {_id: memberId});
             }
+
+                
             
         });
 
@@ -27,3 +31,4 @@ Template.signUp.events({
         Meteor.logout();
     }
 });
+

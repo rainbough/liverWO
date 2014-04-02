@@ -15,8 +15,8 @@ Meteor.methods({
 
         // removes whitespace 
 	    var trimInput = function(val) {
-        	return val.replace(/^\s*|\s*$/g, "");
-      	}
+          return val.replace(/\s+/g,'');
+        }
 
         email = trimInput(email);
 		var passwordsMatch = function(val1, val2) {
@@ -26,6 +26,9 @@ Meteor.methods({
       	var isValidPassword = function(val) {
         	return val.length >= 6 ? true : false; 
       	}
+        var memberUpdate = function(memberId, userId) {
+            Members.update({_id: memberId}, {$set: {user_id: userId}});
+        }
       	var goodPassword = isValidPassword(password);
       	var correctPassword = passwordsMatch(password, password2);
 
@@ -36,7 +39,11 @@ Meteor.methods({
             throw new Meteor.Error(422, "Password needs to be at least 6 characters long.");
 
     	if (goodPassword && correctPassword) {
-			Accounts.createUser({email: email, password: password});
+	       var userId = Accounts.createUser({email: email, password: password, username: memberId});
+           memberUpdate(memberId, userId);
+           return userId;
         }
+        
+
 	}
 });
