@@ -6,11 +6,12 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/">Liver</a>
+			<a class="navbar-brand font-title" href="/"><span class="orange">liver</span>.wholeorgan.org</a>
 			<div id="navbar-collapse" class="navbar-collapse collapse">
+				<br>
 				<ul class="navbar-link navbar-right">
 					{{#unless currentUser}}
-					<li><a href="/signin">Login / Register</a></li>
+					<li><a href="/signin">Login</a></li>
 					{{/unless}}
 					{{#if currentUser}}
 					<li><a href="/signin">{{email}}</a></li>
