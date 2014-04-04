@@ -11,9 +11,9 @@
 				<br>
 				<ul class="navbar-link navbar-right">
 					<li><a href="/">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Members</a></li>
-					<li><a href="#">Latest</a></li>
+					<li><a href="{{pathFor 'about'}}">About</a></li>
+					<li><a href="{{pathFor 'membersList'}}">Members</a></li>
+					<li><a href="{{pathFor 'latest'}}">Latest</a></li>
 					{{#unless currentUser}}
 					<li><a href="/signin">Log In</a></li>
 					{{/unless}}
