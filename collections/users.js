@@ -1,10 +1,9 @@
-// This method handles field validation for the user account creation.
-
-
 Meteor.users.allow({
   update: adminUser,
   remove: adminUser
 })
+
+// This method handles field validation for the user account creation.
 
 Meteor.methods({
 	user: function(userAttributes) {
