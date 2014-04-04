@@ -23,16 +23,13 @@
           </div>
         {{/if}}
         <br>
-	    	{{#if institution1}}
+	    	{{#if institutions}}
   	    	<div class="affiliations inline">
   	    		<h5>Affiliations:</h5>
-            <p>{{institution1}}</p> 
-              {{#if institution2}}
-                <p>{{institution2}}</p>
-              {{/if}} 
-              {{#if institution3}}
-                <p>{{institution3}}</p>
-              {{/if}}
+          {{#each institutions}}
+            <div>{{institution}}</div>
+          {{/each}}
+
   	    	</div>
 	    	{{/if}}
 	    </div>
