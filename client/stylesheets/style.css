@@ -1,8 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Muli);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
-@font-face{
-	font-family: 'Open Sans';
-	src: url('http://fonts.googleapis.com/css?family=Open+Sans');
-}
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
 /* setting up the sticky footer */
 * {
   margin: 0;
@@ -10,10 +9,14 @@
 html, body {
   height: 100%;
 }
+h3{
+	font-family: 'Open Sans';
+}
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -142px; 
+  margin-bottom: -142px;
+  font-family: 'Droid Serif'; 
 }
 .page-wrap:after {
   content: "";
@@ -59,6 +62,11 @@ footer li a:hover{
 }
 .orange{
 	color: #FFA824;
+}
+.gray_bg{
+	background-color: #f6f6f6;
+	padding: 10px;
+	border-radius: 2px;
 }
 .font-title{
 	font-size: 1.5em;
@@ -122,9 +130,9 @@ footer li a:hover{
 	display: inline-block;
 	margin-right: 10px;
 }	
-.navbar { 
+.navbar, .navbar-brand { 
 	margin-bottom: 10px;
-	font-family: 'Open Sans';
+	font-family: 'Muli';
 } 
 .navbar-link{
 	list-style: none;
