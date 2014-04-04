@@ -9,8 +9,3 @@ Template.adminMembers.helpers({
 		return Members.find(); 
 	}
 });
-Template.memberProfiles.helpers({
-	members: function() {
-		return Members.find(); 
-	}
-});
