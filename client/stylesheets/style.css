@@ -1,4 +1,4 @@
-
+/* orange: #f26533*/
 /* setting up the sticky footer */
 * {
   margin: 0;
@@ -32,7 +32,7 @@ button{
 	margin-right: 5px;
 }
 body {
-	background: #eee;
+	background: #fff;
 	color: #666666;
 }
 footer{
@@ -49,6 +49,12 @@ footer li a{
 footer li a:hover{
 	color:#6fdc6f;
 	text-decoration: none;
+}
+.orange{
+	color: #FFA824;
+}
+.font-title{
+	font-size: 1.5em;
 }
 .main{
 	margin-right: 40px;
@@ -114,9 +120,21 @@ footer li a:hover{
 } 
 .navbar-link{
 	list-style: none;
+	padding: 10px;
+}
+.navbar-brand{
+	padding-top: 30px;
+}
+.navbar-link a:hover{
+	text-decoration: none;
+	padding: 10px;
+	color: #fff;
+	background-color: #FFA824;
+	border-radius: 2px;
 }
 .navbar-default {
 	background-color: #fff;
+	height: 80px;
 }
 .navbar .navbar-inner {
 	border-radius: 0px 0px 3px 3px; 
