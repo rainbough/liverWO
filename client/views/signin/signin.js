@@ -33,7 +33,6 @@ Template.signIn.events({
         var user = Meteor.user();
         // username is the associated member id.
         var userId = user._id;
-        console.log(userId);
         Meteor.call('memberExists', userId, function(error, id){
             if (error) {
                 throwError(error.reason);
