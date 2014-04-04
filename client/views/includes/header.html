@@ -10,12 +10,17 @@
 			<div id="navbar-collapse" class="navbar-collapse collapse">
 				<br>
 				<ul class="navbar-link navbar-right">
+					<li><a href="/">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Members</a></li>
+					<li><a href="#">Latest</a></li>
 					{{#unless currentUser}}
-					<li><a href="/signin">Login</a></li>
+					<li><a href="/signin">Log In</a></li>
 					{{/unless}}
 					{{#if currentUser}}
 					<li><a href="/signin">{{email}}</a></li>
 					{{/if}}
+
 				</ul>
 			</div>
 		</div>
