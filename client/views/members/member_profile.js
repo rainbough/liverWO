@@ -6,8 +6,8 @@ Template.memberProfile.helpers({
 
 Template.memberProfile.events({
 	'click #edit': function(){
-		var currentMemberId = this._id;
-		Router.go('memberEdit', {_id: currentMemberId });
+		var currentMemberRoute = this.routeName;
+		Router.go('memberEdit', {routeName: currentMemberRoute });
 		
 	},
 

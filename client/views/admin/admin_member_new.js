@@ -47,16 +47,16 @@ Template.adminMemberNew.events({
 	// These add input fields for additional associations, associatiates, institutions
 	'click #add_institutions': function(e){
 		e.preventDefault();
-		$('.institution_group').append('<input name="institutions" class="institutions" type="text" value="" placeholder="organization name" />');
+		$('.institution_group').append('<div class="inline"><input name="institutions" class="institutions" type="text" value="" placeholder="organization name" /></div>');
 	},
 	'click #add_associates': function(e){
 		e.preventDefault();
-		$('.associates_group').append('<input class="associates" name="labAssociates" type="text" value="" placeholder="associate name" />');
+		$('.associates_group').append('<div class="inline"><input class="associates" name="labAssociates" type="text" value="" placeholder="associate name" /></div>');
 
 	},
 	'click #add_associations': function(e){
 		e.preventDefault();
-		$('.associations_group').append('<input class="associations" name="associations" type="text" value="" placeholder="association name" />');
+		$('.associations_group').append('<div class="inline"><input class="associations" name="associations" type="text" value="" placeholder="association name" /></div>');
 	}
 });
 

@@ -8,8 +8,8 @@ Template.memberLink.helpers({
 
 Template.memberLink.events({
 	'click #edit': function(){
-		var currentMemberId = this._id;
-		Router.go('memberEdit', {_id: currentMemberId });
+		var currentMemberRoute = this.routeName;
+		Router.go('memberEdit', {routeName: currentMemberRoute });
 		
 	},
 
