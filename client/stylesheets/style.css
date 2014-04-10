@@ -1,6 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Muli);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
-
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
 /* setting up the sticky footer */
 * {
@@ -60,6 +59,9 @@ footer li a:hover{
 	color:#6fdc6f;
 	text-decoration: none;
 }
+label{
+	padding: 5px;
+}
 .orange{
 	color: #FFA824;
 }
@@ -73,6 +75,7 @@ footer li a:hover{
 }
 .main{
 	margin-right: 40px;
+	font-family: 'helvetica';
 }
  /* Admin Sidebar Start*/
 .sidebar{
@@ -131,37 +134,24 @@ footer li a:hover{
 	margin-right: 10px;
 }	
 .navbar, .navbar-brand { 
-	margin-bottom: 10px;
 	font-family: 'Muli';
 } 
-.navbar-link{
-	list-style: none;
-}
-.navbar-link li{
-	display: inline-block;
-}
-.navbar-link a{
-	padding: 5px 20px 5px 20px;
-	margin: 10px;
 
+.navbar-default .navbar-nav > li > a {
+	padding: 3px 10px 3px 10px;
+	margin: 0px 20px 5px 0;
 }
-.navbar-brand{
-	padding-top: 20px;
-}
-.navbar-link a:hover{
-	text-decoration: none;
-	padding: 5px 20px 5px 20px;
+.navbar-default .navbar-nav > li > a:hover {
+	padding: 3px 10px 3px 10px;
+	margin: 0px 20px 5px 0;
 	color: #fff;
 	background-color: #FFA824;
 	border-radius: 2px;
-	margin: 10px;
 }
+
+
 .navbar-default {
 	background-color: #fff;
-	height: 80px;
-}
-.navbar .navbar-inner {
-	border-radius: 0px 0px 3px 3px; 
 }
 .controls input{
 	border-radius: 3px;

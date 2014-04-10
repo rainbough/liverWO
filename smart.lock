@@ -5,7 +5,8 @@
       "iron-router": {},
       "spin": {},
       "roles": {},
-      "bootstrap-3": {}
+      "bootstrap-3": {},
+      "jqueryui": {}
     },
     "packages": {
       "iron-router": {
@@ -28,10 +29,20 @@
         "tag": "v3.1.1-1",
         "commit": "63dd38968828bb8963636df93e9a1c45e2dfe67e"
       },
+      "jqueryui": {
+        "git": "https://github.com/mizzao/meteor-jqueryui.git",
+        "tag": "v1.10.4",
+        "commit": "c75906fc9e1e19abf1ad5b2963925122ff8a0336"
+      },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
         "tag": "v0.2.2",
         "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
+      },
+      "build-fetcher": {
+        "git": "https://github.com/mizzao/meteor-build-fetcher.git",
+        "tag": "v0.1.0",
+        "commit": "e3813b1fc7f5c576e8e1fa4c51ae6f4687780a35"
       }
     }
   }
