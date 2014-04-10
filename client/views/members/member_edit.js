@@ -1,9 +1,9 @@
 Template.memberEdit.events({
 	'submit form': function(e) {
 		e.preventDefault();
-		
-		var currentMemberRoute = this.routeName;
-		var currentMemberId = this._id;
+
+		var	currentMemberId = this._id
+		var	currentMemberRoute = this.routeName;
 		var memberProperties = {
 			routeName: $(e.target).find('[name=routeName]').val(),
 			imageUrl: $(e.target).find('[name=image_url]').val(),
@@ -29,12 +29,13 @@ Template.memberEdit.events({
 
 		}
 
-		Members.update(currentMemberId, {$set: memberProperties}, function(error) {
-			if (error) {
+		Meteor.call('memberUpdate', memberProperties, currentMemberId, currentMemberRoute, function(error, routeName){
+			if(error){
 				throwError(error.reason);
-			} else {
-				Router.go('memberPage', {routeName: currentMemberRoute});
 			}
+			else
+				Router.go('memberPage', {routeName: currentMemberRoute});
+			
 		});
 		
 	},
@@ -66,6 +67,8 @@ var getArray = function(class_name){
 	$('.'+ class_name).each(function(){
 		input_array.push($(this).val());
 	});
+	console.log(input_array);
 	return input_array;
+
 
 }

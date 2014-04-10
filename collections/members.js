@@ -73,5 +73,29 @@ Meteor.methods({
 		} else {
 			throw new Meteor.Error(404, 'No Profile exists for this user');
 		}	
+	},
+
+	memberUpdate: function(memberProperties, currentMemberId, currentMemberRoute) {
+		var user = Meteor.user();
+		var ownsProfile = function(userId, doc){
+			return doc && doc.user_id === userId;
+		}
+		var email2 = memberProperties.email2;
+		var correctUser = ownsProfile(user._id, this.user_id);
+
+		var admin = Roles.userIsInRole(user, 'admin');
+
+		if(!correctUser && !admin)
+			throw new Meteor.Error(403, "You are not authorized to edit this profile.");
+		if(correctUser || admin){
+			Members.update(currentMemberId, {$set: memberProperties}, function(error) {
+				if (error) {
+					return error;
+				}
+				else
+					return currentMemberRoute;
+			});
+		}
+
 	}
 });
