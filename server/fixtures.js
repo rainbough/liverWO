@@ -5,9 +5,8 @@ if (Members.find().count() === 0) {
 	Members.insert({
 		firstname: 'Tom',
 		lastname: 'Coleman',
-		institution1: 'meteor.com',
 		email: 'tom@example.com',
-		profileName: "TColeman"
+		routeName: "TColeman"
 	});	
 
 	Members.insert({
@@ -16,9 +15,6 @@ if (Members.find().count() === 0) {
 	  email: "rainbough@landesbioscience.com",
 	  firstname: "Rainbough",
 	  imageUrl: "https://s3.amazonaws.com/blogimages.socialagency.com/1da053eb656bc204ca516e2a5fe5b4fc.png",
-	  institution1: "Landes Bioscience",
-	  institution2: "MakerSquare",
-	  institution3: "",
 	  labAddress1: "Rio Grande St.",
 	  labAddress2: "",
 	  labName: "Sublime",
@@ -29,7 +25,7 @@ if (Members.find().count() === 0) {
 	  suffix: "LMT",
 	  title: "Web Developer",
 	  zip: "78681",
-	  profileName: "RPhillips"
+	  routeName: "RPhillips"
 	});
 
 
@@ -39,9 +35,6 @@ if (Members.find().count() === 0) {
 	  country: "USA",
 	  firstname: "Jane",
 	  imageUrl: "http://cdn.superbwallpapers.com/wallpapers/animals/kitten-16219-1920x1080.jpg",
-	  institution1: "Landes Bioscience",
-	  institution2: "Breath and Balance Bodyworks",
-	  institution3: "MakerSquare",
 	  labAddress1: "112 Right Here Dr.",
 	  labAddress2: "Unit 5",
 	  labName: "Sublime Text Lab",
@@ -52,7 +45,7 @@ if (Members.find().count() === 0) {
 	  suffix: "PHD",
 	  title: "assistant",
 	  zip: "78681",
-	  profileName: "JDoe"
+	  routeName: "JDoe"
 	});
 
 }

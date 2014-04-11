@@ -148,18 +148,28 @@ label{
 	background-color: #FFA824;
 	border-radius: 2px;
 }
+.affiliations{
+	padding: 10px;
+	background: rgba(121, 168, 136, .3);
+	border-radius: 5px;
 
+}
 
 .navbar-default {
 	background-color: #fff;
 }
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
 	background: none;
-	border-top: 2px solid #ccc;
+	border-top: 1px solid #ccc;
 	border-bottom: none;
 	border-left: none;
 	border-right: none;
 	border-radius: 0 0 0 0;
+	font-family: 'Open Sans'
+}
+.ui-state-default:hover{
+	background-color: #F7F7F7;
+	color: #009ACD;
 }
 .ui-widget-content {
 	border: none;
