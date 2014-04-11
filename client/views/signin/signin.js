@@ -38,8 +38,9 @@ Template.signIn.events({
                 throwError(error.reason);
 
             } else {
-                var currentMemberRoute = this.routeName;
-                Router.go('memberEdit', {routeName: currentMemberRoute });
+                var memberId = Members.findOne({_id: id});
+                var memberRoute = memberId.routeName;
+                Router.go('memberEdit', {routeName: memberRoute});
             }
         });
     }
