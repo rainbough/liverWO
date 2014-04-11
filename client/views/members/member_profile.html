@@ -2,7 +2,7 @@
     <div class="member">
         {{#if currentUser}}
             {{#if ownsProfile}}
-                <a class="btn btn-success pull-right" style="color:white;" href="{{_id}}/edit">Edit Profile</a>
+                <a class="btn btn-success pull-right" style="color:white;" href="{{pathFor 'memberEdit'}}">Edit Profile</a>
             {{/if}}
         {{/if}}
         {{#if isInRole 'admin'}}

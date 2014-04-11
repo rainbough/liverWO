@@ -80,8 +80,9 @@ Meteor.methods({
 		var ownsProfile = function(userId, doc){
 			return doc && doc.user_id === userId;
 		}
+		var memberObj = Members.findOne({_id: currentMemberId});
 		var email2 = memberProperties.email2;
-		var correctUser = ownsProfile(user._id, currentMemberId.user_id);
+		var correctUser = ownsProfile(user._id, memberObj);
 
 		var admin = Roles.userIsInRole(user, 'admin');
 
