@@ -38,7 +38,8 @@ Template.signIn.events({
                 throwError(error.reason);
 
             } else {
-                Router.go('memberEdit', {_id: id});
+                var currentMemberRoute = this.routeName;
+                Router.go('memberEdit', {routeName: currentMemberRoute });
             }
         });
     }
