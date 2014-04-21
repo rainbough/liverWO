@@ -75,31 +75,30 @@
         </div>
     <h4>Create New User Account for {{prefix}} {{firstname}}  {{lastname}}</h4>
 
-        <input name="memberId" class="hidden" value="{{_id}}" />
-        <div class="control-group">
-            <label class="control-label" for="email">Email</label>
-            <br>
-            <input name="email" type="email" value="" placeholder="email@example.com" />
-        </div>
-        <br>
-        <div class="control-group">
-            <label class="control-label" for="password">Enter Password</label>
-            <br>
-            <input name="password" type="password" value="" placeholder="" />
-        </div>
-        <br>
-        <div class="control-group">
-            <label class="control-label" for="password">Re-enter Password</label>
-            <br>
-            <input name="password2" type="password" value="" placeholder="" />
-        </div>
-        <br>
-        <div class="control-group">
-            <div class="controls">
-                <input type="" value="Create an Account" class="btn btn-primary" />
+        <form id="register" action="">
+            <div class="control-group">
+                <label class="control-label" for="email">Email</label>
+                <br>
+                <input name="email" type="email" value="" placeholder="email@example.com" />
             </div>
-        </div>
-    <br>
-    <br>
-</div>
+            <br>
+            <div class="control-group">
+                <label class="control-label" for="password">Enter Password</label>
+                <br>
+                <input name="password" type="password" value="" placeholder="" />
+            </div>
+            <br>
+            <div class="control-group">
+                <label class="control-label" for="password">Re-enter Password</label>
+                <br>
+                <input name="password2" type="password" value="" placeholder="" />
+            </div>
+            <br>
+            <div class="control-group">
+                <div class="controls">
+                    <input type="submit" value="Create an Account" class="btn btn-primary" />
+                </div>
+            </div>
+       </form> 
+    </div>
 </template>

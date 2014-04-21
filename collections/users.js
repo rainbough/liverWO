@@ -10,7 +10,7 @@ Meteor.methods({
 	    var email = userAttributes.email;
 	    var password = userAttributes.password;
 	    var password2 = userAttributes.password2;
-        var memberId = userAttributes.memberId;
+      var memberId = userAttributes.memberId;
 
         // removes whitespace 
 	    var trimInput = function(val) {

@@ -9,19 +9,19 @@ Meteor.methods({
    * @param {String} group Company to update permissions for
    */
   deleteUser: function (targetUserId) {
-    var loggedInUser = Meteor.user()
+    var loggedInUser = Meteor.user();
 
     if (!loggedInUser ||
         !Roles.userIsInRole(loggedInUser, ['admin'])) {
-      throw new Meteor.Error(403, "Access denied")
+      throw new Meteor.Error(403, "Access denied");
     }
 
     // remove permissions for target group
-    Roles.setUserRoles(targetUserId, [], group)
+    Roles.setUserRoles(targetUserId, [], group);
 
     // do other actions required when a user is removed...
   }
-})
+});
 
 Meteor.methods({
   /**
@@ -32,15 +32,13 @@ Meteor.methods({
    * @param {String} group Company to update permissions for
    */
   updateRoles: function (targetUserId, roles) {
-    var loggedInUser = Meteor.user()
+    var loggedInUser = Meteor.user();
 
-    if (!loggedInUser ||
-        !Roles.userIsInRole(loggedInUser, 
-                            ['admin'])) {
-      throw new Meteor.Error(403, "Access denied")
+    if (!loggedInUser || !Roles.userIsInRole(loggedInUser, ['admin'])) {
+      throw new Meteor.Error(403, "Access denied");
     }
 
-    Roles.setUserRoles(targetUser, roles)
+    Roles.setUserRoles(targetUser, roles);
   }
-})
+});
 

@@ -18,7 +18,10 @@ Template.memberSignUp.events({
                 throwError(error.reason);
             } else {
                 Meteor.loginWithPassword(user.email, user.password);
-                Router.go('memberPage', {_id: memberId});
+                var currentMemberId = Members.findOne({_id: memberId});
+                var currentMemberRoute = currentMemberId.routeName;
+
+                Router.go('memberPage', {routeName: currentMemberRoute});
             }
 
                 
