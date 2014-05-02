@@ -5,6 +5,15 @@ Meteor.publish('groups', function() {
 	return Groups.find();
 });
 
+// Publish the user's feeds.
+Meteor.publish("feeds", function(){
+	return Feeds.find();
+});
+
+// Publish the user's articles for this feed.
+Meteor.publish("articles", function(feedId){
+	return Articles.find();
+});
 
 // server/publish.js
 

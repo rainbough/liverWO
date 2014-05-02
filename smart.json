@@ -4,6 +4,12 @@
     "spin": {},
     "roles": {},
     "bootstrap-3": {},
-    "jqueryui": {}
+    "jqueryui": {},
+    "jasmine": {
+      "git": "https://github.com/rainbough/meteor-jasmine.git"
+    },
+    "external-file-loader": {},
+    "feedparser": {},
+    "npm": {}
   }
 }

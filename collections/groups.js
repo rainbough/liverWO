@@ -1,6 +1,3 @@
-// Create Groups collection
-Groups = new Meteor.Collection('groups');
-
 // This is for creating a new group it is called on the group_submit.js page
 // It checks for the presence of a user email and a group name. 
 // It also checks to see if the groupname already exists for another group.

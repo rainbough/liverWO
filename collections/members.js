@@ -1,4 +1,4 @@
-Members = new Meteor.Collection('members');
+
 
 // see ownsProfile and adminUser functions in lib/permissions.js
 // This allows client side editing and deleting of member profiles

@@ -6,13 +6,20 @@
       "spin": {},
       "roles": {},
       "bootstrap-3": {},
-      "jqueryui": {}
+      "jqueryui": {},
+      "jasmine": {
+        "git": "https://github.com/rainbough/meteor-jasmine.git",
+        "branch": "master"
+      },
+      "external-file-loader": {},
+      "feedparser": {},
+      "npm": {}
     },
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.7.0",
-        "commit": "05f34bc48c4cad9fdaa366c1ddcabe6980232ece"
+        "tag": "v0.7.1",
+        "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
       },
       "spin": {
         "git": "https://github.com/SachaG/meteor-spin.git",
@@ -34,10 +41,30 @@
         "tag": "v1.10.4",
         "commit": "c75906fc9e1e19abf1ad5b2963925122ff8a0336"
       },
+      "jasmine": {
+        "git": "https://github.com/rainbough/meteor-jasmine.git",
+        "branch": "master",
+        "commit": "3e52c275fb71bcda9e4bd53a9f8bcb7b730d8db2"
+      },
+      "external-file-loader": {
+        "git": "https://github.com/davidd8/meteor-external-file-loader.git",
+        "tag": "v0.1.4",
+        "commit": "352694a7cf906b8241161c2fd1435161c1d5409f"
+      },
+      "feedparser": {
+        "git": "https://github.com/DBeath/meteor-feedparser.git",
+        "tag": "v0.16.3",
+        "commit": "6c1a67a542868b2331b2c189a9b2e6e1f2af7cd1"
+      },
+      "npm": {
+        "git": "https://github.com/arunoda/meteor-npm.git",
+        "tag": "v0.2.6",
+        "commit": "177ab6118de5bf8cffb19481343d5762ff7a2aaf"
+      },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
-        "tag": "v0.2.2",
-        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
+        "tag": "v0.2.4",
+        "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
       },
       "build-fetcher": {
         "git": "https://github.com/mizzao/meteor-build-fetcher.git",

@@ -13,3 +13,6 @@ service-configuration
 bootstrap-3
 email
 jqueryui
+external-file-loader
+feedparser
+npm
