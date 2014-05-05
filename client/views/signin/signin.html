@@ -1,15 +1,15 @@
 <template name="signIn">
 	{{#unless currentUser}}
-		<h3>Log In:</h3>
+		<h3 class="white">Log In:</h3>
 		<br>
 		<form id="login-form" action="">
 			<div class="control-group">
-				<label class="control-label" for="email">Email</label>
+				<label class="login-labels" for="email">Email</label>
 				<br>
 				<input name="email" type="email" value="" placeholder="email@example.com" />
 			</div>
 			<div class="control-group">
-				<label class="control-label" for="password">Password</label>
+				<label class="login-labels" for="password">Password</label>
 				<br>
 				<input name="password" type="password" value="" placeholder="" />
 			</div>
@@ -23,7 +23,7 @@
 	   <br>
    {{/unless}}
    {{#if currentUser}}
-	   	You are logged in as: <strong>{{email}}</strong>
+	   	<p class="white">You are logged in as: <strong>{{email}}</strong></p>
 
 	   	<div><a id="logout" href="#">Log Out</a></div>
 	   	<br>

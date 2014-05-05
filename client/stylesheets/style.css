@@ -8,9 +8,8 @@
 html, body {
   height: 100%;
 }
-h3{
+h1, h2, h3, h4, h5{
 	font-family: 'Open Sans';
-	color: #fff;
 }
 .page-wrap {
   min-height: 100%;
@@ -27,7 +26,12 @@ footer, .page-wrap:after {
   height: 142px; 
 }
 /* end of sticky footer*/
-
+.members{
+	color: #5F9EA0;
+}
+.white{
+	color: #fff;
+}
 .grid-block, .member, .comments li, .comment-form { 
 	background: #fff;
 	border-radius: 3px;
@@ -46,8 +50,11 @@ footer, .page-wrap:after {
 .article_content{
 	padding: 20px;
 }
+.login-labels{
+	color: #C1F0F6;
+}
 a {
-	color: #777;
+	color: #5F9EA0;
 }
 button{
 	margin-right: 5px;
@@ -177,7 +184,8 @@ label{
 	border-left: none;
 	border-right: none;
 	border-radius: 0 0 0 0;
-	font-family: 'Open Sans'
+	font-family: 'Open Sans';
+	color: #ADEAEA;
 }
 .ui-state-default:hover{
 	background-color: #F7F7F7;
