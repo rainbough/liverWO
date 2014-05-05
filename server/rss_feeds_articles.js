@@ -1,5 +1,4 @@
-var Feedparser = Npm.require('feedparser')
-	, request = Npm.require('request')
+var request = Npm.require('request')
 	, fs = Npm.require('fs')
 	, Fiber = Npm.require('fibers');
 
