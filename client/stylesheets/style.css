@@ -10,6 +10,7 @@ html, body {
 }
 h3{
 	font-family: 'Open Sans';
+	color: #fff;
 }
 .page-wrap {
   min-height: 100%;
@@ -27,12 +28,23 @@ footer, .page-wrap:after {
 }
 /* end of sticky footer*/
 
-.grid-block, .main, .member, .comments li, .comment-form { 
+.grid-block, .member, .comments li, .comment-form { 
 	background: #fff;
 	border-radius: 3px;
 	padding: 10px;
 	margin-bottom: 10px;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+.article{
+	background: #fff;
+	width: 100%;
+}
+.title-section{
+	padding: 10px;
+	background: #f3f3f3;
+}
+.article_content{
+	padding: 20px;
 }
 a {
 	color: #777;
@@ -41,11 +53,11 @@ button{
 	margin-right: 5px;
 }
 body {
-	background: #fff;
+	background: #325C74;
 	color: #666666;
 }
 footer{
-	background: teal;
+	background: #222;
 	z-index: 1;
 }
 footer li{

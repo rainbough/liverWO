@@ -1,35 +1,15 @@
 <template name="article">
-	<div class="article {{open}}" id="{{_id}}">
-		<div class="row {{#if read}}read{{/if}} clearfix">
-			<h5 class="articletitle">
-			{{#if open}}
+	<div class="article" id="{{_id}}">
+		<div class="title-section">
+			<h4 class="articletitle">
 				<a href="{{link}}">{{title}}</a>
-				<span class="closeArticle">
-					<i class="fa fa-minus-square"></i>
-				</span>
-			{{else}}
-				{{title}}
-			{{/if}}
-			</h5>
+			</h4>
 
-			{{#if read}}
-				<span class="label alert right markedRead">Read</span>
-			{{/if}}
-
-			<small>{{author}} | {{timestamp}}</small>
-
-
+			<h6>{{author}} | {{timestamp}}</h6>
 		</div>
-
-		{{#if open}}
 			<div class="article_content">
 				{{{content}}}
 			</div>
-			<footer>
-				<a href="{{link}}"></a>
-			</footer>
-			<hr />      
-		{{/if}}
-
+		<hr>  
 	</div>
 </template>

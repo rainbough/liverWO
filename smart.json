@@ -10,6 +10,7 @@
     },
     "external-file-loader": {},
     "feedparser": {},
-    "npm": {}
+    "npm": {},
+    "cheerio": {}
   }
 }
