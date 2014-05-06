@@ -13,8 +13,7 @@
       },
       "external-file-loader": {},
       "feedparser": {},
-      "npm": {},
-      "cheerio": {}
+      "npm": {}
     },
     "packages": {
       "iron-router": {
@@ -61,11 +60,6 @@
         "git": "https://github.com/arunoda/meteor-npm.git",
         "tag": "v0.2.6",
         "commit": "177ab6118de5bf8cffb19481343d5762ff7a2aaf"
-      },
-      "cheerio": {
-        "git": "https://github.com/andreioprisan/meteor-cheerio.git",
-        "tag": "v0.3.2",
-        "commit": "f7b7b8c4ad4dbac7e9b34a4b110150cd5ec95bae"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

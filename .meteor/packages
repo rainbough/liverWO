@@ -16,4 +16,4 @@ jqueryui
 external-file-loader
 feedparser
 npm
-cheerio
+stylus
