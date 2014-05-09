@@ -11,8 +11,8 @@ Meteor.publish("feeds", function(){
 });
 
 // Publish the user's articles for this feed.
-Meteor.publish("articles", function(feedId){
-	return Articles.find();
+Meteor.publish("articles", function(options){
+	return Articles.find({}, options);
 });
 
 // server/publish.js

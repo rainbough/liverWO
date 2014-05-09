@@ -1,8 +1,5 @@
 /// articleList ///
 
-Template.articleList.articles = function(){
-    return Articles.find({},{ sort: {retrived: -1}});
-};
 
 
 Template.articleList.rendered = function(){
