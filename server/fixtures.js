@@ -87,7 +87,7 @@ if (Meteor.users.find().count() === 0) {
 if (Feeds.find().count() === 0) {
 	
 	Feeds.insert({
-		url: "http://www.ncbi.nlm.nih.gov/entrez/eutils/erss.cgi?rss_guid=1bwpplXhivi4rwv5i5kHzouCGsT9__qgqo4rnJSwTpXxE9Csel"
+		url: "http://www.ncbi.nlm.nih.gov/entrez/eutils/erss.cgi?rss_guid=18Op8ZMNYSFQKTL7UnfiVLFb0fe-Yq32KVR8e1IG7j2BI5doph"
 	});
 }
 

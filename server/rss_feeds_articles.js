@@ -47,6 +47,7 @@ function addArticle(article, feed, done){
 			date = article.pubdate;
 		};
 		Articles.insert({
+			retrieved: new Date().getTime(),
 			title: article.title,
 			date: date,
 			pubdate: article.pubdate,
@@ -135,46 +136,35 @@ var readFeed = function(feed){
 // 	};
 // };
 
-// // Remove a single feed, and all it's unstarred articles.
-// function removeFeed(feed, done){
-// 	Feeds.remove(feed._id, done);
-// 	Articles.remove({feedId: feed._id, starred: false}, done);
-// };
+// Remove a single feed, and all it's unstarred articles.
+function editFeed(url){
+	var feed = Feeds.findOne();
+	Feeds.update(feed._id, {$set: url}, function(error) {
+		if (error) {
+			return error;
+		}
+		else
+			console.log("feed url updated");
+			return feed._id;
+	});
+	
+};
 
-// // Remove a single article.
-// function removeArticle(articleId, done){
-// 	Articles.remove(articleId, done);
-// };
+
 
 Meteor.methods({
 	addFeed: function(url) {
 		return addFeed(url, done);
 	},
 
-// 	removeFeed: function(feed){
-// 		return removeFeed(feed, done);
-// 	},
-
-// 	removeAll: function(){
-// 		return removeAllArticles();
-// 	},
-
 	refreshFeed: function(){
 		var feed = Feeds.findOne({});
 		return readFeed(feed);
 	},
 
-// 	markAllRead: function(feed){
-// 		return markAllRead(feed);
-// 	},
-
-// 	markRead: function(articleId){
-// 		return markRead(articleId, done);
-// 	},
-
-// 	markUnread: function(articleId){
-// 		return markUnread(articleId, done);
-// 	}
+	editFeed: function(url){
+		return editFeed(url);
+	}
 });
 
 // Meteor.startup(function () {
