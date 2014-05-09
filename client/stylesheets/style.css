@@ -56,6 +56,14 @@ footer, .page-wrap:after {
 a {
 	color: #5F9EA0;
 }
+
+.search_link a {
+
+}
+
+.search_link a:hover {
+	color: orange;
+}
 button{
 	margin-right: 5px;
 }
@@ -274,4 +282,5 @@ label{
 .load-more:hover {
 	text-decoration: none;
 	background: rgba(0, 0, 0, 0.1); 
+	color: orange;
 }
