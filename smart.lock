@@ -13,7 +13,8 @@
       },
       "external-file-loader": {},
       "feedparser": {},
-      "npm": {}
+      "npm": {},
+      "font-awesome": {}
     },
     "packages": {
       "iron-router": {
@@ -53,13 +54,18 @@
       },
       "feedparser": {
         "git": "https://github.com/DBeath/meteor-feedparser.git",
-        "tag": "v0.16.3",
-        "commit": "6c1a67a542868b2331b2c189a9b2e6e1f2af7cd1"
+        "tag": "v0.16.6",
+        "commit": "53c121f56949b6fe022dc8640087e1ad739db7d9"
       },
       "npm": {
         "git": "https://github.com/arunoda/meteor-npm.git",
         "tag": "v0.2.6",
         "commit": "177ab6118de5bf8cffb19481343d5762ff7a2aaf"
+      },
+      "font-awesome": {
+        "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
+        "tag": "v4.0.3",
+        "commit": "61e9361384347547ae144f8228faa4deffda23db"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
