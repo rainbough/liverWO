@@ -94,7 +94,9 @@ if (Feeds.find().count() === 0) {
 if (News.find().count() === 0){
 	News.insert({
 		title: "Test News Item",
-		content: "This is a test of our news items system. It uses some html <strong>Like This</strong>"
+		content: "This is a test of our news items system. It uses some html <strong>Like This</strong>",
+		imageUrl: "http://www.anokhimedia.com/imagefly/w650-h310-c/resources/media/images/blog_articles/big_news_fake_blog-01_5d6_650x310.jpg",
+		routeName: "TestNewsItem"
 	});
 }
 
