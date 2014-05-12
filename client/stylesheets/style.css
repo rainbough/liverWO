@@ -284,3 +284,6 @@ label{
 	background: rgba(0, 0, 0, 0.1); 
 	color: orange;
 }
+.redactor_.redactor_editor{
+	min-height: 200px;
+}
