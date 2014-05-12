@@ -15,6 +15,10 @@ Meteor.publish("articles", function(options){
 	return Articles.find({}, options);
 });
 
+Meteor.publish("news", function(){
+	return News.find();
+});
+
 // server/publish.js
 
 // Give authorized users access to sensitive data by group

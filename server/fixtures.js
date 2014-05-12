@@ -91,3 +91,10 @@ if (Feeds.find().count() === 0) {
 	});
 }
 
+if (News.find().count() === 0){
+	News.insert({
+		title: "Test News Item",
+		content: "This is a test of our news items system. It uses some html <strong>Like This</strong>"
+	});
+}
+
