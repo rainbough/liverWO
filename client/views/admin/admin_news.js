@@ -13,5 +13,15 @@ Template.adminNews.events({
 		}
 
 		console.log(news.content);
+
+		Meteor.call('news', news, function(error, id) { 
+			if (error) {
+				throwError(error.reason);
+			} else {
+				var newNews = News.findOne({_id: id});
+				var newNewsRoute = newNews.routeName;
+				Router.go('newsPage', {routeName: newNewsRoute});
+			}
+		});
 	}
 });
