@@ -1,9 +1,90 @@
 <template name="footer">
+	
+	<!-- //////////////////////////////////////////// email signup bar -->
+	<div class="db-section">
+		<hr class="spacer30">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-lg-5">
+					<h6 class="light">Stay <strong>up to date</strong> with Liver.WholeOrgan.org!</h6>
+					<span class="accent">No spam, we promise!</span>
+				</div>
+				<div class="col-md-4 col-lg-5">
+					<p class="cln">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, esse, illo.</p>
+				</div>
+				<div class="col-md-2 col-lg-2">
+					<p class="cln">lorem ipsum dolor sit amet draco</p>
+				</div>
+			</div>
+		</div>
+
+		<hr class="spacer30">
+	</div>
+
+
+	<!-- /////////////////////////////////////// actual footer content -->
 	<footer>
-		<ul class="container">
-		{{#if isInRole 'admin'}}
-			<li class="footer_link"><a href="{{pathFor 'adminHome'}}">Administration</a></li>
-		{{/if}}
-		</ul>
+		<div class="container">
+			<hr class="spacer60">
+
+
+			<!-- section titles -->
+			<div class="row hidden-xs">
+				<div class="col-sm-7 col-md-9">
+					<h6><strong>About</strong> Us</h6>
+				</div>
+
+				<div class="col-sm-5 col-md-3">
+					<h6><strong>Coordinating</strong> Organization</h6>
+				</div>
+
+				<hr class="spacer10">
+			</div>
+
+
+			<!-- bulk of content -->
+			<div class="row">
+				<div class="col-md-4 hidden-sm">
+					<img src="/images/wholeorganproper.png" alt="WholeOrgan.org Research Community" class="logoproper hidden-sm">
+				</div>
+
+				<div class="col-sm-7 col-md-5 wholeorgan-description">
+					<hr class="spacer30 visible-xs">
+					<p class="cln">WholeOrgan.org is the research initiative of SOS Solving Organ Shortage, a nonprofit promoting close scientific collaboration and inspired public policy. <a href="http://www.solvingorganshortage.org" alt="SOS Solving Organ Shortage" target="_blank">Learn More »</a></p>
+				</div>
+
+				<div class="col-sm-5 col-md-3 sos-linkage">
+					<hr class="spacer40 visible-xs">
+					<img src="/images/sos_new.png" alt="" class="sos-link">
+				</div>
+			</div>
+
+
+			<!-- divider -->
+			<hr class="spacer40">
+			<div class="fullwidthline"></div>
+			<hr class="spacer20">
+
+
+			<!-- secondary navigation -->
+			<div class="row">
+				<div class="col-md-12">
+
+					<ul class="footernav">
+					{{#if isInRole 'admin'}}
+						<li class="footer_link"><a href="{{pathFor 'adminHome'}}">Administration</a></li>
+					{{/if}}
+						<li><a href="#">Members</a></li>
+						<li><a href="#">Summit</a></li>
+						<li><a href="#">Papers</a></li>
+						<li><a href="#">Supporters</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<hr class="spacer20">
+		</div>
 	</footer>
 </template>

@@ -1,0 +1,170 @@
+@require "main"
+
+.hero
+	p
+		color darken(minblue, 10%)
+		font-weight light
+
+	h4
+		color #659bc1
+		font-size 24px
+		margin-top 30px
+	h1
+		color white
+		font-weight light
+
+
+	// everything over 768px (tablet screens)
+	@media handheld, screen and (min-width: 768px)
+		h4
+			font-size 30px
+			margin-top 10px
+
+		h1
+			font-size 50px
+
+	// everything over 992px (tablet screens)
+	@media handheld, screen and (min-width: 992px)
+		h4
+			margin-top 50px
+			font-size 30px
+
+		h1
+			font-size 60px
+
+	// everything over 1200px (large screens)
+	@media handheld, screen and (min-width: 1200px)
+		h4
+			margin-top 75px
+
+
+
+.community-hero
+	background url('/images/community-bg.jpg') 50% 50%
+	background-size cover
+	background-color #1d557f
+	height 200px
+	padding 40px 0
+
+	h4
+		margin-top 5px
+
+	// everything over 768px (tablet screens)
+	@media handheld, screen and (min-width: 768px)
+		height 270px
+
+	// everything over 992px (tablet screens)
+	@media handheld, screen and (min-width: 992px)
+		height 400px
+
+		h1
+			font-size 60px
+
+	// everything over 1200px (large screens)
+	@media handheld, screen and (min-width: 1200px)
+		height 440px
+
+		h4
+			margin-top 70px
+
+
+
+// event hero unit
+
+.event-hero
+	background url('/images/chic-bg.jpg') 50% 25%
+	background-size cover
+	background-color #1d557f
+	padding 40px 0
+
+	h4
+		margin 30px 0 5px 0
+		padding 0
+	h2
+		color white
+		font-weight light
+		margin 0
+		padding 0
+		line-height 1.2
+	h5
+		color lighten(fadedblue, 5%)
+
+	// everything over 768px (tablet screens)
+	@media handheld, screen and (min-width: 768px)
+		h4
+			font-size 30px
+			margin-top 10px
+
+	// everything over 992px (tablet screens)
+	@media handheld, screen and (min-width: 992px)
+		h4
+			margin-top 50px
+			font-size 30px
+
+		h5
+			font-size 24px
+
+	// everything over 1200px (large screens)
+	@media handheld, screen and (min-width: 1200px)
+		h4
+			margin-top 30px
+
+		h5
+			font-size 24px
+
+	// specific styles for summit page
+	&.summit
+		height 270px
+
+		h1
+			font-size 24px
+		h4
+			margin-top 10px
+		h5
+			font-size 16px
+			margin-top 10px
+
+		.liver-stamp
+			width 85%
+			margin-top 60px
+
+		// everything over 768px (tablet screens)
+		@media handheld, screen and (min-width: 768px)
+			height 300px
+
+			h1
+				font-size 36px
+			h5
+				font-size 26px
+
+			.liver-stamp
+				width 100%
+				margin-top 40px
+
+		// everything over 992px (tablet screens)
+		@media handheld, screen and (min-width: 992px)
+			height 400px
+
+			h1
+				font-size 50px
+
+			h4
+				margin-top 30px
+
+			.liver-stamp
+				width 90%
+				margin-top 70px
+
+		// everything over 1200px (large screens)
+		@media handheld, screen and (min-width: 1200px)
+			height 440px
+
+			h1
+				font-size 60px
+
+			h4
+				margin-top 40px
+
+			.liver-stamp
+				width 85%
+
