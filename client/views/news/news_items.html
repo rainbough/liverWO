@@ -1,0 +1,14 @@
+<template name="newsItem">
+    <div class="member">
+        {{#if imageUrl}}
+            <div class="profile-pic pull-right inline">
+                <img src="{{imageUrl}}" />
+            </div>
+        {{/if}}
+        <div class="member-content inline">
+            <div class="member-list inline">
+                <h3><a href="{{pathFor 'newsPage'}}">{{title}}</a></h3>
+            </div>
+        </div>
+    </div>
+</template>

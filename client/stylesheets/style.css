@@ -87,39 +87,33 @@ label{
 	font-family: 'helvetica';
 }
  /* Admin Sidebar Start*/
-.sidebar{
-	background: #222;
-	height: 100%;
-	width: 100px;
+
+.sidebar ul{
+	margin-left: -30px;
 	float: left;
-	position: fixed;
-	z-index: 999;
+	background: rgba(0, 0, 0, 0.2);
+}
+.container{
+	margin-left: 120px;
 }
 .sidebar li{
 	list-style: none;
 	color: #fff;
 	font-size: 11px;
+	margin: 10px;
+
 }
 .sidebar li a{
 	color: #fff;
 }
-.sidebar ul{
-	margin-top: 40px;
-}
-.adminLinks li{
-	margin:20px 0 10px -30px;
+.redactor_toolbar{
+	max-height: 30px;
 }
 .adminLinks li a:hover{
 	color:#6fdc6f;
 	text-decoration: none;
 }
-.admin_top{
-	width: 100%;
-	height: 20px;
-	background: #222;
-	position: fixed;
-	margin-top: -65px;
-}
+
   /* Admin Sidebar End*/
 .footer_link{
 	padding: 10px 5px 10px 5px;
@@ -250,4 +244,7 @@ label{
 	text-decoration: none;
 	background: rgba(0, 0, 0, 0.1); 
 	color: orange;
+}
+.redactor_.redactor_editor{
+	min-height: 200px;
 }

@@ -1,12 +1,14 @@
 <template name="adminSidebar">
 	{{#if isInRole 'admin'}}
-		<div class="side-bar-container">
+		<div class="side-bar-container"  data-spy="affix"  data-offset-top="60">
 			<div class="sidebar">
 				<ul class="adminLinks">
 					<li><a href="{{pathFor 'adminMemberNew'}}">New Member</a></li>
 					<li><a href="{{pathFor 'newGroup'}}">New Group</a></li>
 					<li><a href="{{pathFor 'membersList'}}">View Members</a></li>
 					<li><a href="{{pathFor 'groupList'}}">View Groups</a></li>
+					<li><a href="{{pathFor 'adminNews'}}">Add News</a></li>
+					<li><a href="{{pathFor 'news'}}">View News</a></li>
 				</ul>
 			</div>
 		</div>
