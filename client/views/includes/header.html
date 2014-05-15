@@ -1,29 +1,44 @@
 <template name="header">
+
 	<header class="navbar navbar-default" role="navigation">
-		<div class="container-fluid">
+		<div class="container">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="nav navbar-nav navbar-brand font-title" href="/"><span class="orange">liver</span>.wholeorgan.org</a>
+
+			<!-- BRAND -->
+			<a class="navbar-brand" href="/">
+				<!-- tablet logo -->
+				<img src="/images/tabletlogo.png" alt="The Whole Liver Research Consortium" class="tabletlogo hidden-xs hidden-md hidden-lg">
+
+				<!-- main logo -->
+				<img src="/images/liverlogo.png" alt="The Whole Liver Research Consortium" class="hidden-sm">
+			</a>
+
+			<!-- NAVIGATION -->
 			<div id="navbar-collapse" class="navbar-collapse collapse">
 				<br>
 				<ul class="nav navbar-nav navbar-link navbar-right">
-					<li><a href="/">Home</a></li>
-					<li><a href="{{pathFor 'about'}}">About</a></li>
-					<!-- <li><a href="{{pathFor 'membersList'}}">Members</a></li> -->
-					<li><a target="_blank" href="http://www.wholeorgan.org">Latest</a></li>
-					<li><a href="{{pathFor 'articleList'}}">Articles</a></li>
+					<!-- <li><a href="/">Home</a></li> -->
+					<!-- <li><a href="{{pathFor 'about'}}">About</a></li> -->
+					<li><a href="{{pathFor 'participants'}}">Members</a></li>
+					<li><a href="{{pathFor 'summit2014'}}">Summit</a></li>
+					<!-- <li><a target="_blank" href="http://www.wholeorgan.org">Latest</a></li> -->
+					<li><a href="{{pathFor 'articleList'}}">Papers</a></li>
+					<li><a href="{{pathFor 'supporters'}}">Supporters</a></li>
+					<li><a href="{{pathFor 'contact'}}">Contact</a></li>
+
 					{{#unless currentUser}}
-					<li><a href="/signin"><i class="fa fa-cogs"></i></a></li>
+					<!-- <li><a href="/signin"><i class="fa fa-cogs"></i></a></li> -->
 					{{/unless}}
 					{{#if currentUser}}
-					<li><a href="/signin">{{email}}</a></li>
+					<!-- <li><a href="/signin">{{email}}</a></li> -->
 					{{/if}}
-
 				</ul>
 			</div>
 		</div>
 	</header>
+
 </template>

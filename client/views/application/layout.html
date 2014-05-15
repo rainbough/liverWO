@@ -1,11 +1,17 @@
 <template name="layout">
 	{{> header}}
-	{{> adminSidebar}}
-	<div class="container page-wrap">
-		{{> errors}}
-		<div id="main" class="row-fluid">
-			{{> yield}}
+	
+	<div class="page-wrap">
+		<div class="container">
+			{{> errors}}
+
 		</div>
+
+		<!-- don't put the yield in a container. i'm going to be breaking out of the container 
+		many times per page layout so we'll have to declare containers manually in each template. -->
+		
+		{{> yield}}
 	</div>
+
 	{{> footer}}
 </template>

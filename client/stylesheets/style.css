@@ -1,21 +1,19 @@
 @import url(http://fonts.googleapis.com/css?family=Muli);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
-/* setting up the sticky footer */
+
+/* STICKY FOOTER ///////////////////////////////////////// */
 * {
   margin: 0;
 }
 html, body {
   height: 100%;
 }
-h1, h2, h3, h4, h5{
-	font-family: 'Open Sans';
-}
+
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -142px;
-  font-family: 'Droid Serif'; 
+  margin-bottom: -340px;
 }
 .page-wrap:after {
   content: "";
@@ -23,14 +21,14 @@ h1, h2, h3, h4, h5{
 }
 footer, .page-wrap:after {
   /* .push must be the same height as footer */
-  height: 142px; 
+  height: 340px; 
 }
-/* end of sticky footer*/
+/* END STICKY FOOTER //////////////////////////////////// */
+
+
+
 .members{
 	color: #5F9EA0;
-}
-.white{
-	color: #fff;
 }
 .grid-block, .member, .comments li, .comment-form { 
 	background: #fff;
@@ -68,23 +66,7 @@ button{
 	margin-right: 5px;
 }
 body {
-	background: #325C74;
 	color: #666666;
-}
-footer{
-	background: #222;
-	z-index: 1;
-}
-footer li{
-	list-style: none;
-	display: inline-block;
-}
-footer li a{
-	color: #fff;
-}
-footer li a:hover{
-	color:#6fdc6f;
-	text-decoration: none;
 }
 label{
 	padding: 5px;
@@ -154,21 +136,6 @@ label{
 	display: inline-block;
 	margin-right: 10px;
 }	
-.navbar, .navbar-brand { 
-	font-family: 'Muli';
-} 
-
-.navbar-default .navbar-nav > li > a {
-	padding: 3px 10px 3px 10px;
-	margin: 0px 20px 5px 0;
-}
-.navbar-default .navbar-nav > li > a:hover {
-	padding: 3px 10px 3px 10px;
-	margin: 0px 20px 5px 0;
-	color: #fff;
-	background-color: #FF8247;
-	border-radius: 2px;
-}
 .affiliations{
 	padding: 10px;
 	background: rgba(121, 168, 136, .3);
