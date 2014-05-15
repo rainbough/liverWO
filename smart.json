@@ -11,6 +11,7 @@
     "external-file-loader": {},
     "feedparser": {},
     "npm": {},
-    "font-awesome": {}
+    "font-awesome": {},
+    "modernizr-meteor": {}
   }
 }

@@ -14,7 +14,8 @@
       "external-file-loader": {},
       "feedparser": {},
       "npm": {},
-      "font-awesome": {}
+      "font-awesome": {},
+      "modernizr-meteor": {}
     },
     "packages": {
       "iron-router": {
@@ -66,6 +67,11 @@
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
         "tag": "v4.0.3",
         "commit": "61e9361384347547ae144f8228faa4deffda23db"
+      },
+      "modernizr-meteor": {
+        "git": "https://github.com/ckir/modernizr-meteor.git",
+        "tag": "v2.6.2",
+        "commit": "391ca2a3beff3cd2b0e1099cb2d744b5a2e8a73e"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
