@@ -1,18 +1,52 @@
 <template name="articleList">
+
+
+	<div class="hero standard-hero">
+
+		<div class="wo-plug hidden-sm hidden-xs">
+			<hr class="spacer10">
+			<img src="/images/liver-stamp-shadow.png" alt="" class="liver-stamp">
+
+			<div class="content">
+				<p>The Whole Liver Research Community is an SOS Solving Organ Shortage research initiative. Click here to view our other communities.</p>
+			</div>
+		</div>
+
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-lg-8">
+					<hr class="spacer40 hidden-xs">
+					<h1>Our <strong>Papers</strong></h1>
+					<h4 class="sub"><em>Collections published by community members</em></h4>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<hr class="spacer60">
+
+
 	<!-- {{#if isInRole 'admin'}}
 		<label class="white">Edit Feed</label><input id="feedUrl">
 		<button type="submit" id="editFeed">Submit</button>
 	{{/if}} -->
-	<div>
-		{{#each articles}}
-			{{> article }}
-		{{/each}}
-		{{#if nextPath}}
-      		<a class="load-more" href="{{nextPath}}">Load more</a>
-    	{{/if}}
-	</div>
 
-	<div class="search_link">
-		<a href="http://www.ncbi.nlm.nih.gov/pubmed?term=((alpini,+gianfranco+OR+albrecht,+jeffrey+OR+brayman,+kenneth+OR+shah,+famille+OR+duncan,+stephen+OR+Fox,+Ira+OR+fujimoto,+yasuhiro+OR+fukumitsu,+ken+OR+garcia-cardena,+guillermo+OR+gilbert,+thomas+OR+glaser,+shannon+s.+OR+heaton,+nigel+OR+huppert,+stacey+s.+OR+kane+bartholomew+OR+lagasse,+eric+OR+nyberg,+scott+l.+OR+ott,+vanessa+OR+petersen,+bryon+OR+rudnick,+david+OR+soker,+shay+OR+soto-gutierrez,+alejandro+OR+squires,+robert+h.+OR+strom,+stephen+OR+takebe,+takamori+OR+wertheim,+jason+a.+OR+willenbring,+holger+OR+yagi,+hiroshi+OR+Asai,+Akihiro%5BAuthor%5D))+AND+liver%5BText+Word%5D&cmd=DetailsSearch">See the whole search on pubmed</a>
+
+	<div class="container">
+		<div>
+			{{#each articles}}
+				{{> article }}
+			{{/each}}
+			{{#if nextPath}}
+	      		<a class="load-more" href="{{nextPath}}">Load more</a>
+	    	{{/if}}
+		</div>
+
+		<div class="search_link">
+			<a href="http://www.ncbi.nlm.nih.gov/pubmed?term=((alpini,+gianfranco+OR+albrecht,+jeffrey+OR+brayman,+kenneth+OR+shah,+famille+OR+duncan,+stephen+OR+Fox,+Ira+OR+fujimoto,+yasuhiro+OR+fukumitsu,+ken+OR+garcia-cardena,+guillermo+OR+gilbert,+thomas+OR+glaser,+shannon+s.+OR+heaton,+nigel+OR+huppert,+stacey+s.+OR+kane+bartholomew+OR+lagasse,+eric+OR+nyberg,+scott+l.+OR+ott,+vanessa+OR+petersen,+bryon+OR+rudnick,+david+OR+soker,+shay+OR+soto-gutierrez,+alejandro+OR+squires,+robert+h.+OR+strom,+stephen+OR+takebe,+takamori+OR+wertheim,+jason+a.+OR+willenbring,+holger+OR+yagi,+hiroshi+OR+Asai,+Akihiro%5BAuthor%5D))+AND+liver%5BText+Word%5D&cmd=DetailsSearch">See the whole search on pubmed</a>
+		</div>
 	</div>
 </template>

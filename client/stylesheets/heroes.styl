@@ -9,9 +9,16 @@
 		color #659bc1
 		font-size 24px
 		margin-top 30px
-	h1
+
+		&.sub
+			margin-top 0
+
+	h1, h2, h3, h5, h6
 		color white
-		font-weight light
+
+	a
+		// text-decoration underline
+		color white
 
 
 	// everything over 768px (tablet screens)
@@ -23,7 +30,7 @@
 		h1
 			font-size 50px
 
-	// everything over 992px (tablet screens)
+	// everything over 992px (medium screens)
 	@media handheld, screen and (min-width: 992px)
 		h4
 			margin-top 50px
@@ -38,6 +45,88 @@
 			margin-top 75px
 
 
+.standard-hero
+	background url('/images/community-bg.jpg') 50% 50%
+	background-size cover
+	background-color #1d557f
+	height 200px
+	padding 40px 0
+
+	h4
+		margin-top 5px
+
+	.wo-plug
+		padding 0
+		margin 0
+
+	// everything over 768px (tablet screens)
+	@media handheld, screen and (min-width: 768px)
+		height 240px
+
+	// everything over 992px (medium screens)
+	@media handheld, screen and (min-width: 992px)
+		height 260px
+
+		h1
+			font-size 56px
+		h4.sub
+			font-size 24px
+
+		.wo-plug
+			width 380px
+			position absolute
+			right 0
+			top 135px
+
+			img.liver-stamp
+				width 165px
+				position relative
+				z-index 55
+
+			.content
+				z-index 50
+				position relative
+
+				bottom 165px
+				right 0
+				float right
+				width 80%
+				height 162px
+				background-color darken(darkblue, 5%)
+				
+				p
+					font-size 13px
+					padding 10px 20px 10px 100px
+
+
+	// everything over 1200px (large screens)
+	@media handheld, screen and (min-width: 1200px)
+		height 280px
+
+		h1
+			font-size 60px
+		h4.sub
+			font-size 30px
+		
+		.wo-plug
+			width 450px
+			position absolute
+			top 135px
+			right 0
+
+			img.liver-stamp
+				width 185px
+
+			.content
+				bottom 185px
+				width 80%
+				height 182px
+				background-color darken(darkblue, 5%)
+				
+				p
+					padding 30px 20px 20px 120px
+
+
 
 .community-hero
 	background url('/images/community-bg.jpg') 50% 50%
@@ -49,16 +138,48 @@
 	h4
 		margin-top 5px
 
+	.wo-plug
+		padding 0
+		margin 0
+
 	// everything over 768px (tablet screens)
 	@media handheld, screen and (min-width: 768px)
 		height 270px
 
-	// everything over 992px (tablet screens)
+	// everything over 992px (medium screens)
 	@media handheld, screen and (min-width: 992px)
 		height 400px
 
 		h1
 			font-size 60px
+		h4
+			margin-top 50px
+
+		.wo-plug
+			width 380px
+			position absolute
+			right 0
+			top 195px
+
+			img.liver-stamp
+				width 165px
+				position relative
+				z-index 55
+
+			.content
+				z-index 50
+				position relative
+
+				bottom 165px
+				right 0
+				float right
+				width 80%
+				height 162px
+				background-color darken(darkblue, 5%)
+				
+				p
+					font-size 13px
+					padding 10px 20px 10px 100px
 
 	// everything over 1200px (large screens)
 	@media handheld, screen and (min-width: 1200px)
@@ -66,6 +187,24 @@
 
 		h4
 			margin-top 70px
+
+		.wo-plug
+			width 450px
+			position absolute
+			top 205px
+			right 0
+
+			img.liver-stamp
+				width 185px
+
+			.content
+				bottom 185px
+				width 80%
+				height 182px
+				background-color darken(darkblue, 5%)
+				
+				p
+					padding 30px 20px 20px 120px
 
 
 
@@ -95,7 +234,7 @@
 			font-size 30px
 			margin-top 10px
 
-	// everything over 992px (tablet screens)
+	// everything over 992px (medium screens)
 	@media handheld, screen and (min-width: 992px)
 		h4
 			margin-top 50px
@@ -141,7 +280,7 @@
 				width 100%
 				margin-top 40px
 
-		// everything over 992px (tablet screens)
+		// everything over 992px (medium screens)
 		@media handheld, screen and (min-width: 992px)
 			height 400px
 

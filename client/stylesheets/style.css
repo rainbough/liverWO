@@ -37,17 +37,7 @@ footer, .page-wrap:after {
 	margin-bottom: 10px;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
 }
-.article{
-	background: #fff;
-	width: 100%;
-}
-.title-section{
-	padding: 10px;
-	background: #f3f3f3;
-}
-.article_content{
-	padding: 20px;
-}
+
 .login-labels{
 	color: #C1F0F6;
 }

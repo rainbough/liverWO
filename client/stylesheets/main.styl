@@ -6,25 +6,23 @@ muli = 'Muli', sans-serif;
 
 // declare some colors 
 
-// blues
+// all of the blues whoa whoa whoa getting pretty crazy
 blue = #006bb3
 darkblue = #1b537b
 bgblue = #164d73
 minblue = #f6f8fa
 fadedblue = #6496b9
+darkfaded = #4a5963
 
-
-red = #d54747
 orange = #f26533
 textorange = #ee5f12
-green = #8cca38
 
 // declare some font weights
 normal = 400
 light = 300
 heavy = 600
 
-/* MEDIA QfUERY GUIDE 
+/* MEDIA QUERY GUIDE 
 Large devices — desktops, 1200px and up
 Medium devices — desktops, 992px and up
 Small devices — tablets, 768px and up
@@ -32,42 +30,67 @@ XS devices — less than 768px
 */
 
 
+
+/* ------------------------------------------------------------------------------------------------- */
+
+
 /* Full-Width Container Hack */
 .container-full
-	padding 0 15px
-	margin-left 0
-	margin-right 0
-	background-color minblue
+	padding 0 15px /* don't forget bootstrap's 15px gutters */
+	margin 0 auto
 
-	// this may be a temporary solution
+	&.minblue
+		background-color minblue
 
+.container
+	margin 0 auto /* for some reason i had to re-declare this here b/c containers weren't centering ? */
 
-/* TYPOGRAPHY ////////////////////////// */
+/* 
+ * TYPOGRAPHY
+ *
+ * Responsive styles for text - mobile devices up to normal size. Currently a
+ * WIP. If you want to adjust a header style responsively, do it here. They 
+ *
+ *
+ */
 
 h1, h2, h3, h4, h5, h6
 	font-family open
 	font-weight light
-	color darkblue
+	color darkblue /* default color will be darkblue */
 	margin 0
+	padding 0
 
+	// what happens when a header is also a link?
 	a
-		color #333
+		color blue
+
+	// color options
+	&.faded
+		color fadedblue
+	&.darkblue
+		color darkblue
+	&.orange
+		color textorange
+	&.darkfaded
+		color darkfaded
 
 h1
 	font-size 28px
 	line-height 1.2
 h2
-	font-size 26px
+	font-size 28px
 h3
-	font-size 24px
-	color darkblue
+	font-size 28px
 h4
-	font-size 22px
+	font-size 26px
 h5
-	font-size 20px
+	font-size 24px
+	&.small
+		font-size 22px
+		line-height 1.3
 h6
 	font-size 18px
-	color darkblue
 
 p
 	color #4d6473
@@ -97,11 +120,13 @@ p
 		font-size 42px
 	h3
 		font-size 36px
-		color darkblue
 	h4
 		font-size 30px
 	h5
 		font-size 26px
+		&.small
+			font-size 24px
+			line-height 1.3
 	h6
 		font-size 20px
 		color darkblue
@@ -113,7 +138,7 @@ p
 		&.small
 			font-size 15px
 
-// everything over 992px (tablet screens)
+// everything over 992px (medium screens)
 @media handheld, screen and (min-width: 992px)
 	h1
 		font-size 60px
@@ -122,33 +147,13 @@ p
 		font-size 42px
 	h3
 		font-size 36px
-		color darkblue
 	h4
 		font-size 30px
-	h5
-		font-size 26px
 	h6
 		font-size 20px
-		color darkblue
 
-// everything over 1200px (large screens)
-@media handheld, screen and (min-width: 1200px)
-	h1
-		font-size 60px
-		line-height 1.2
-	h2
-		font-size 42px
-	h3
-		font-size 36px
-		color darkblue
-	h4
-		font-size 30px
-	h5
-		font-size 26px
-	h6
-		font-size 20px
-		color darkblue	
 
+// styles that stay the same across all screen sizes
 strong
 	font-weight 400
 
@@ -160,7 +165,13 @@ a
 	
 
 
-/* NAVIGATION ////////////////////////// */
+/* 
+ * NAVIGATION
+ *
+ * Styles for the <header> and various navbar nests.
+ *
+ *
+ */
 
 header
 	z-index 100 /* allows dropdown menu to scroll on top of other elements,
@@ -222,7 +233,7 @@ header
 						border-radius 2px
 
 
-// everything over 992px (tablet screens)
+// everything over 992px (medium screens)
 @media handheld, screen and (min-width: 992px)
 	.navbar
 		padding 15px 0
@@ -258,7 +269,8 @@ header
  *
  */
 
-// use photo-sectional-one for a wider photo
+
+// ALL PAGES use photo-sectional-one for a wider photo
 .photo-sectional-one
 	height 200px
 	margin-bottom 10px
@@ -270,7 +282,7 @@ header
 	.photo-sectional-one
 		height 200px
 
-// everything over 992px (tablet screens)
+// everything over 992px (medium screens)
 @media handheld, screen and (min-width: 992px)
 	.photo-sectional-one
 		height 380px
@@ -284,11 +296,11 @@ header
 
 
 
-// use photo-sectional-two for a thinner but taller photo
+// ALL PAGES use photo-sectional-two for a thinner but taller photo
 .photo-sectional-two
 	height 200px
 	margin-top 30px
-	background url('/images/alex-group1.jpg') 30% 50%
+	background url('/images/nigel-group.jpg') 60% 50%
 	background-size cover
 
 // everything over 768px (tablet screens)
@@ -296,7 +308,7 @@ header
 	.photo-sectional-two
 		height 200px
 
-// everything over 992px (tablet screens)
+// everything over 992px (medium screens)
 @media handheld, screen and (min-width: 992px)
 	.photo-sectional-two
 		height 440px /* might have to use min-height on these */
@@ -308,7 +320,8 @@ header
 		height 440px
 
 
-// quotes
+
+// SUMMIT quotes
 .quote
 	padding 30px 0
 
@@ -333,7 +346,7 @@ header
 		span.quote-text
 			font-size 30px
 
-	// everything over 992px (tablet screens)
+	// everything over 992px (medium screens)
 	@media handheld, screen and (min-width: 992px)
 		img.quote-mark
 			width 100%
@@ -346,8 +359,80 @@ header
 			font-size 36px
 
 
+// SUMMIT facilitator photos
+.facil-photo
+	width 100%
+	// everything over 768px (tablet screens)
+	@media handheld, screen and (min-width: 768px)
+		width 100%
 
-// latest papers HOME PAGE LIST
+// PAPERS
+.title-section
+	padding 20px
+	background #f3f3f3
+	margin-bottom 40px
+
+.article-content
+	padding 20px
+
+	// everything over 768px (tablet screens)
+	@media handheld, screen and (min-width: 768px)
+		padding 0
+
+
+// PARTICIPANTS
+.inv_box
+	padding-bottom 20px
+	text-align center
+
+	p
+		line-height 1.3
+
+	.row
+		padding 15px 0
+		border-radius 5px
+
+		&:hover
+			background #f6f8f9
+			// box-shadow 1px 1px 1px #eee inset
+	img
+		border-radius 4px
+
+	// everything over 768px (tablet screens)
+	@media handheld, screen and (min-width: 768px)
+		padding-bottom 0
+		text-align left
+
+		h5
+			margin-top 15px
+
+	// everything over 992px (tablet screens)
+	@media handheld, screen and (min-width: 992px)
+		h5
+			margin-top 20px
+
+	// everything over 1200px (large screens)
+	@media handheld, screen and (min-width: 1200px)
+		h5
+			margin-top 30px
+
+
+img.inv
+	width 100%
+	max-width 150px /* for mobile phones */
+	padding-bottom 20px
+
+	// everything over 768px (tablet screens)
+	@media handheld, screen and (min-width: 768px)
+		max-width 275px
+		padding 0
+
+	// everything over 992px (tablet screens)
+	@media handheld, screen and (min-width: 992px)
+		max-width 100%
+
+
+// HOME unordered list of the latest publications
 ul.latest-papers
 	list-style-type none
 	margin 0
@@ -366,7 +451,7 @@ ul.latest-papers
 
 		
 
-// box areas
+// ALL PAGES box areas
 .db-section
 	background-color bgblue
 
@@ -442,7 +527,7 @@ footer
 		width 100%
 		height auto
 
-// everything over 992px (tablet screens)
+// everything over 992px (medium screens)
 @media handheld, screen and (min-width: 992px)
 	footer
 		h6
@@ -458,6 +543,81 @@ footer
 
 
 
+
+/* 
+ * INPUT AND BUTTON STYLES
+ *
+ * Includes contact form and email signup styles as well as all standardized
+ * buttons to be included across the site.
+ *
+ */
+
+
+
+form
+	margin 0
+	padding 0
+
+	@media handheld, screen and (min-width: 600px)
+		margin-left 0
+
+	@media handheld, screen and (min-width:768px)
+		margin-left 0
+
+	@media handheld, screen and (min-width: 992px)
+		margin-left 0
+
+	textarea
+		width 100%
+		max-width 100%
+		height 200px
+		max-height 200px
+		background-color #f3f8f9
+		border 1px solid darken(#b6ced2, 15%)
+		border-radius(3px)
+		outline none
+		padding 20px
+		box-shadow inset 0px 2px 1px darken(#f3f8f9, 6%)
+
+	label
+		color darken(#f3f8f9, 55%)
+		font-family muli
+		font-size 15px
+		padding 15px 0
+
+		&.skinny
+			padding-bottom 0
+
+	// default input
+	input
+		background-color #f3f8f9
+		border 1px solid darken(#b6ced2, 15%)
+		border-radius(3px)
+		font-family muli
+		font-size 16px
+		box-shadow inset 0px 2px 1px darken(#f3f8f9, 6%)
+		width 100%
+		margin 0
+
+	input[type=checkbox]
+		border none
+		box-shadow none
+		display inline-block
+		width auto !important
+
+	input[type=text], input[type=password]
+		padding 15px 20px
+
+	.help-block
+		margin-top -18px
+		color #bbb
+		font-style oblique
+
+		&:hover
+			cursor pointer
+			color #888
+
+
 /* 
  * MISCELLANEOUS STYLES
  *
@@ -471,6 +631,21 @@ footer
 .center
 	text-align center
 	margin auto
+
+// mobile-only center
+.mobile-center
+	text-align center
+	margin auto
+
+	// everything over 768px (tablet screens)
+	@media handheld, screen and (min-width: 768px)
+		text-align left
+		margin 0 
+
+
+// image standards are important
+img
+	max-width 100%
 
 // fullwidth divider
 .fullwidthline
@@ -557,4 +732,6 @@ hr.spacer60
 			padding 10px
 
 
-
+// full-width colors
+.minblue-back
+	background-color minblue
