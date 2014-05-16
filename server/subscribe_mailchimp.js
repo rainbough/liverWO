@@ -8,7 +8,6 @@ Meteor.methods({
 		var result = HTTP.post(url, {timeout:30000});
 		if(result.statusCode==200) {
 			var respJson = JSON.parse(result.content);
-			alert("response received.");
 			return respJson;
 		} else {
 			// TODO: Add better error handling
@@ -17,7 +16,6 @@ Meteor.methods({
 			//} else {
 			//  some stuff;
 			//}
-			alert("Response issue: ", result.statusCode);
 			var errorJson = JSON.parse(result.content);
 			throw new Meteor.Error(result.statusCode, errorJson.error);
 		}
