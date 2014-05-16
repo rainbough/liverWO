@@ -8,10 +8,6 @@ Template.contact.events({
 			message: $(e.target).find('[name=message]').val()
 		}
 
-		console.log(contactEmail);
-		console.log(contactEmail.senderName);
-		console.log(contactEmail.message);
-
 		Meteor.call("sendContactEmail", contactEmail ,function(error, result){
 
 			if(error){
