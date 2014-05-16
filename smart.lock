@@ -15,7 +15,8 @@
       "feedparser": {},
       "npm": {},
       "font-awesome": {},
-      "modernizr-meteor": {}
+      "modernizr-meteor": {},
+      "bootboxjs": {}
     },
     "packages": {
       "iron-router": {
@@ -72,6 +73,11 @@
         "git": "https://github.com/ckir/modernizr-meteor.git",
         "tag": "v2.6.2",
         "commit": "391ca2a3beff3cd2b0e1099cb2d744b5a2e8a73e"
+      },
+      "bootboxjs": {
+        "git": "https://github.com/TimHeckel/meteor-bootboxjs.git",
+        "tag": "v4.2.0",
+        "commit": "2b7d18ad028d9e7b37238ecf2a8a7970735cebd1"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

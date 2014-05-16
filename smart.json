@@ -12,6 +12,7 @@
     "feedparser": {},
     "npm": {},
     "font-awesome": {},
-    "modernizr-meteor": {}
+    "modernizr-meteor": {},
+    "bootboxjs": {}
   }
 }
