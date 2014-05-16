@@ -281,6 +281,7 @@ header
 @media handheld, screen and (min-width: 768px)
 	.photo-sectional-one
 		height 200px
+		margin-bottom 0
 
 // everything over 992px (medium screens)
 @media handheld, screen and (min-width: 992px)
@@ -574,7 +575,7 @@ form
 		max-height 200px
 		background-color #f3f8f9
 		border 1px solid darken(#b6ced2, 15%)
-		border-radius(3px)
+		border-radius 3px
 		outline none
 		padding 20px
 		box-shadow inset 0px 2px 1px darken(#f3f8f9, 6%)
@@ -592,7 +593,7 @@ form
 	input
 		background-color #f3f8f9
 		border 1px solid darken(#b6ced2, 15%)
-		border-radius(3px)
+		border-radius 3px
 		font-family muli
 		font-size 16px
 		box-shadow inset 0px 2px 1px darken(#f3f8f9, 6%)
@@ -618,6 +619,147 @@ form
 			color #888
 
 
+
+form.email-subscribe
+	input
+		font-family open
+		font-weight light
+		background-color darkblue
+		box-shadow none
+		color white
+	::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placerholder, :-ms-input-placeholder
+		color white
+	input[type=text]
+		width 100%
+		border-radius 3px
+		border 1px solid white
+		font-size 22px
+	input[type=submit]
+		width 100%
+		height 100%
+		border-radius 3px
+		border 1px solid white
+		font-size 22px
+
+
+
+// helpers for buttons
+border-radius(arg)
+	-webkit-border-radius arg
+	-moz-border-radius arg
+	border-radius arg
+	behavior url(/pie/PIE.htc)
+
+background-gen(color)
+	background-color color
+	&:hover
+		background-color lighten(color, 10%)
+
+
+// button styles	
+a.button, button
+	padding 15px 30px
+	background-color #333 // default color
+	color #fff // default
+	font-weight light
+
+	box-shadow none
+	border none
+	outline none
+
+	font-family open
+	font-size 22px
+
+	border-radius(3px)
+
+	&:hover
+		text-decoration none
+
+	&:active
+		position relative
+		top 1px
+
+	&.small
+		padding 10px 30px
+		font-size 20px
+
+	&.long
+		padding 14px 65px
+
+	&.fluid
+		display inline-block
+		padding 10px
+		width 100%
+		max-width 300px
+
+	&.fillwidth
+		width 100%
+		display block
+		font-size 18px
+
+		// everything over 768px (tablet screens)
+		@media handheld, screen and (min-width: 768px)
+			font-size 22px
+
+		// everything over 992px (medium screens)
+		@media handheld, screen and (min-width: 992px)
+			font-size 18px
+
+		// everything over 1200px (large screens)
+		@media handheld, screen and (min-width: 1200px)
+			font-size 22px
+
+	&.blue
+		background-gen(darkblue)
+
+		&:hover
+			background-color lighten(blue, 5%)
+			color white
+
+	&.orange
+		background-gen(orange)
+		color white
+
+	&.white
+		background-gen(#fff)
+		color textorange
+		// border: 1px solid #ddd;
+
+		&:hover 
+			background-gen(minblue)
+			color darken(textorange, 5%)
+
+
+	img.arrow
+		position relative
+		top 2px
+		float right
+
+		// everything over 768px (tablet screens)
+		@media handheld, screen and (min-width: 768px)
+			top 5px
+
+		// everything over 992px (medium screens)
+		@media handheld, screen and (min-width: 992px)
+			top 2px
+
+		// everything over 1200px (large screens)
+		@media handheld, screen and (min-width: 1200px)
+			top 5px
+
+// work in progress
+.buttonset
+	a
+		display inline-block
+		padding 0
+		height 45px
+
+		&.main
+			width 80%
+		&.sub
+			width 10%
+
+
 /* 
  * MISCELLANEOUS STYLES
  *
@@ -641,6 +783,10 @@ form
 	@media handheld, screen and (min-width: 768px)
 		text-align left
 		margin 0 
+
+// easy align right
+.alignright
+	text-align right
 
 
 // image standards are important
