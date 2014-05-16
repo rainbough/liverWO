@@ -1,10 +1,10 @@
 Meteor.methods({
 	sendContactEmail: function(emailAttributes){
 		Email.send({
-			from: emailAttributes.email,
-			to: ["rainbough@landesbioscience.com", "asaffer@sosorgans.com"],
+			from: "rainbough@sosorgans.com",
+			to: "rainbough@landesbioscience.com",
 			subject: "LIVER Contact Email: " + emailAttributes.senderName,
-			text: emailAttributes.message
+			text: "message from: " + emailAttributes.email + " message:  " + emailAttributes.message 
 		});
 	}
 });
