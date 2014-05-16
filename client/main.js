@@ -1,4 +1,4 @@
-Router.load(function(){
+Router.onRun(function(){
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 	/*$('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();

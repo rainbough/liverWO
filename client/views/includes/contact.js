@@ -1,10 +1,23 @@
 Template.contact.events({
 	"click button#contact-submit": function(e) {
 		e.preventDefault();
-		var fdata = $("form.contact").serializeFormToObj();
-		Meteor.call("sendContactEmail",fdata.message,fdata.email,fdata.first_name,function(err){
-			if(err) alerterror(err.reason);
-			else alertsuccess("Your contact email has been sent!");
+
+		var contactEmail = {
+			senderName: $(e.target).find('[name=senderName]').val(),
+			email: $(e.target).find('[name=email]').val(),
+			message: $(e.target).find('[name=message]').val()
+		}
+
+		Meteor.call("sendContactEmail", contactEmail ,function(error, result){
+
+			if(error){
+				throwError(error.reason);
+			}
+			else
+				// alertsuccess("Your contact email has been sent!");
+				Router.go('home');
+		
+			
 		});
 	}
 });
