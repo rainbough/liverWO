@@ -573,15 +573,15 @@ form
 		max-width 100%
 		height 200px
 		max-height 200px
-		background-color #f3f8f9
-		border 1px solid darken(#b6ced2, 15%)
+		background-color minblue
+		border 1px solid blue
 		border-radius 3px
 		outline none
 		padding 20px
 		box-shadow inset 0px 2px 1px darken(#f3f8f9, 6%)
 
 	label
-		color darken(#f3f8f9, 55%)
+		color darkblue
 		font-family muli
 		font-size 15px
 		padding 15px 0
@@ -591,8 +591,8 @@ form
 
 	// default input
 	input
-		background-color #f3f8f9
-		border 1px solid darken(#b6ced2, 15%)
+		background-color minblue
+		border 1px solid blue
 		border-radius 3px
 		font-family muli
 		font-size 16px
@@ -621,22 +621,33 @@ form
 
 
 form.email-subscribe
+	
+	input[type=text], input[type=submit]
+		max-width 400px
+		// everything over 768px (tablet screens)
+		@media handheld, screen and (min-width: 768px)
+			max-width none
+	
 	input
 		font-family open
 		font-weight light
 		background-color darkblue
 		box-shadow none
 		color white
-	::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placerholder, :-ms-input-placeholder
-		color white
+
+		// this is not working for some reason
+		::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder
+			color white !important
+			opacity 1
+
 	input[type=text]
 		width 100%
 		border-radius 3px
-		border 1px solid white
+		border 1px solid darken(minblue, 30%)
 		font-size 22px
 	input[type=submit]
 		width 100%
-		height 100%
+		height 63px
 		border-radius 3px
 		border 1px solid white
 		font-size 22px
