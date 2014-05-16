@@ -2,8 +2,8 @@ Meteor.methods({
 	sendContactEmail:function(email_body,sender_email,sender_name){
 		Email.send({
 			from: sender_email,
-			to: "contact@WholeOrgan.org",
-			subject: "Liver.WholeOrgan.org Contact Email: "+sender_name,
+			to: "asaffer@sosorgans.com",
+			subject: "LIVER Contact Email: "+sender_name,
 			text: email_body
 		});
 	}
@@ -20,3 +20,5 @@ Meteor.methods({
 		});
 	}
 });
+
+

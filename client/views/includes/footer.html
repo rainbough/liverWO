@@ -10,12 +10,18 @@
 					<h6 class="light">Stay <strong>up to date</strong> with Liver.WholeOrgan.org!</h6>
 					<span class="accent">No spam, we promise!</span>
 				</div>
-				<div class="col-md-4 col-lg-5">
-					<p class="cln">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, esse, illo.</p>
+
+				<hr class="spacer30 visible-xs visible-sm">
+
+				<form class="email-subscribe">
+				<div class="col-sm-8 col-md-4 col-lg-5">
+					<input type="text" placeholder="Enter your email address">
 				</div>
-				<div class="col-md-2 col-lg-2">
-					<p class="cln">lorem ipsum dolor sit amet draco</p>
+				<hr class="spacer10 visible-xs">
+				<div class="col-sm-4 col-md-2 col-lg-2">
+					<input type="submit" value="Sign Up">
 				</div>
+				</form>
 			</div>
 		</div>
 
@@ -75,12 +81,14 @@
 					{{#if isInRole 'admin'}}
 						<li class="footer_link"><a href="{{pathFor 'adminHome'}}">Administration</a></li>
 					{{/if}}
-						<li><a href="#">Members</a></li>
-						<li><a href="#">Summit</a></li>
-						<li><a href="#">Papers</a></li>
-						<li><a href="#">Supporters</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="{{pathFor 'participants'}}">Members</a></li>
+						<li><a href="{{pathFor 'summit2014'}}">Summit</a></li>
+						<li><a href="{{pathFor 'articleList'}}">Papers</a></li>
+						<li><a href="{{pathFor 'supporters'}}">Supporters</a></li>
+						<li><a href="{{pathFor 'contact'}}">Contact</a></li>
 					</ul>
+
+					<p class="small cln">&copy; 2014 WholeOrgan.org. All Rights Reserved.</p>
 				</div>
 			</div>
 
