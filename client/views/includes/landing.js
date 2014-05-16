@@ -3,3 +3,4 @@ Template.home.events({
 		Router.go('/signup');
 	}
 });
+
