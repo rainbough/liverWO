@@ -1,4 +1,4 @@
-Template.base.events({
+Template.footer.events({
 	"click #mailchimp-subscribe-btn": function(e){
 		e.preventDefault();
 		var sub_email = $("#email-address").val();

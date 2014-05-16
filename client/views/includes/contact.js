@@ -19,6 +19,7 @@ Template.contact.events({
 			}
 			else
 				// alertsuccess("Your contact email has been sent!");
+				alert("email sent");
 				Router.go('contact');
 		
 			
