@@ -1,9 +1,9 @@
 Meteor.methods({
-	sendContactEmail:function(emailAttributes){
+	sendContactEmail: function(emailAttributes){
 		Email.send({
 			from: emailAttributes.email,
 			to: ["rainbough@landesbioscience.com", "asaffer@sosorgans.com"],
-			subject: "LIVER Contact Email: "+ emailAttributes.senderName,
+			subject: "LIVER Contact Email: " + emailAttributes.senderName,
 			text: emailAttributes.message
 		});
 	}

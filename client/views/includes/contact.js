@@ -1,5 +1,5 @@
 Template.contact.events({
-	"click button#contact-submit": function(e) {
+	"submit form": function(e) {
 		e.preventDefault();
 
 		var contactEmail = {
@@ -8,6 +8,10 @@ Template.contact.events({
 			message: $(e.target).find('[name=message]').val()
 		}
 
+		console.log(contactEmail);
+		console.log(contactEmail.senderName);
+		console.log(contactEmail.message);
+
 		Meteor.call("sendContactEmail", contactEmail ,function(error, result){
 
 			if(error){
@@ -15,7 +19,7 @@ Template.contact.events({
 			}
 			else
 				// alertsuccess("Your contact email has been sent!");
-				Router.go('home');
+				Router.go('contact');
 		
 			
 		});
