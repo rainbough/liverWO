@@ -16,7 +16,8 @@
       "npm": {},
       "font-awesome": {},
       "modernizr-meteor": {},
-      "bootboxjs": {}
+      "bootboxjs": {},
+      "mocha-web": {}
     },
     "packages": {
       "iron-router": {
@@ -78,6 +79,11 @@
         "git": "https://github.com/TimHeckel/meteor-bootboxjs.git",
         "tag": "v4.2.0",
         "commit": "2b7d18ad028d9e7b37238ecf2a8a7970735cebd1"
+      },
+      "mocha-web": {
+        "git": "https://github.com/mad-eye/meteor-mocha-web.git",
+        "tag": "v0.2.4",
+        "commit": "97194bc90ea9b32047973ff44562a3da3b4e7477"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
