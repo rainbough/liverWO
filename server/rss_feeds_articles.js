@@ -11,6 +11,7 @@ done = function(err, result){
 	};
 };
 
+var cheerio = Meteor.require('cheerio');
 
 // Adds a new feed.
 function addFeed(url, done){
@@ -36,6 +37,30 @@ function addFeed(url, done){
 		return "Added feed " + url;
 };
 
+function domParseFeed(article){
+	$ = cheerio.load(article);
+	var source = $('a').attr('href');
+	var relatedHTML = $('td').next().html();
+	rH = cheerio.load(relatedHTML);
+	var related = rH('a').attr('href');
+	var pubInfo = $('p').next().html();
+	var authors = $('p').next().next().html();
+	var content = $('p').next().next().next().html();
+	var pmID = $('p').next().next().next().next().html();
+	var pubLogo = $('img').attr('src');
+
+	var data = {
+		related: related,
+		sourceLink: source,
+		pubInfo: pubInfo,
+		authorsGroup: authors,
+		content: content,
+		pmID: pmID,
+		pubLogo: pubLogo
+	}
+	return data;
+}
+
 // Adds a new article to the feed.
 function addArticle(article, feed, done){
 	Fiber(function(){
@@ -46,25 +71,27 @@ function addArticle(article, feed, done){
 		} else {
 			date = article.pubdate;
 		};
+		var data = domParseFeed(article.description);
 		Articles.insert({
 			retrieved: new Date().getTime(),
 			title: article.title,
 			date: date,
 			pubdate: article.pubdate,
 			author: article.author,
-			content: article.description,
+			authorsGroup: data.authorsGroup,
+			content: data.content,
 			link: article.link,
-			origlink: article.origlink,
+			related: data.related,
+			origlink: data.sourceLink,
 			feedId: feed._id,
 			userId: feed.userId,
 			summary: article.summary,
 			guid: article.guid,
-			read: false, 
-			starred: false,
+			pubInfo: data.pubInfo,
+			pubLogo: data.pubLogo,
 			comments: article.comments,
 			image: article.image,
-			categories: article.categories,
-			source: article.source,
+			categories: article.categories
 		});
 		Feeds.update(feed._id, {$inc: {unread: 1}});
 	}).run();
