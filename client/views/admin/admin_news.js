@@ -1,29 +1,34 @@
-// Template.adminNews.rendered = function(){
-// 	$('#content').redactor();
-// };
 
+Template.adminNews.rendered = function(){
+	$('#edit_news').editable({
+        	imageUpload: true,
+			textNearImage: true,
+			editorClass: "news_content",
+			inlineMode: false
+    	});
+}
 
-// Template.adminNewsEdit.events({
-// 	"click #edit": function(e){
-// 		e.preventDefault();
-// 		$('#redactor_content').redactor({
-//         	focus: true
-//     	});
-// 	},
-// 	"click #save": function(e){
+Template.adminNews.events({
+	'submit form': function(e){
+		e.preventDefault();
 
-// 		alert("You Clicked SAVE");
-// 	}
+		var news = {
+			title: $(e.target).find('[name=title]').val(),
+			content: $(e.target).find('.news_content').html(),
+			imageUrl: $(e.target).find('[name=imageUrl]').val()
+		}
 
-// });
-// function exampleClickToSave()
-// {
-//     // save content if you need
-//     var html = $('#redactor_content').redactor('get');
-
-//     // destroy editor
-//     $('#redactor_content').redactor('destroy');
-// }
+		Meteor.call('news', news, function(error, id) { 
+			if (error) {
+				throwError(error.reason);
+			} else {
+				var newNews = News.findOne({_id: id});
+				var newNewsRoute = newNews.routeName;
+				Router.go('newsPage', {routeName: newNewsRoute});
+			}
+		});
+	}
+});
 
 
 Template.adminNewsEdit.events({
@@ -64,39 +69,18 @@ Template.adminNewsEdit.events({
 
 });
 
-Template.adminNews.events({
-	'submit form': function(e){
-		e.preventDefault();
-
-		var news = {
-			title: $(e.target).find('[name=title]').val(),
-			content: $(e.target).find('#content').val(),
-			imageUrl: $(e.target).find('[name=imageUrl]').val()
-		}
-
-		console.log(news.content);
-
-		Meteor.call('news', news, function(error, id) { 
-			if (error) {
-				throwError(error.reason);
-			} else {
-				var newNews = News.findOne({_id: id});
-				var newNewsRoute = newNews.routeName;
-				Router.go('newsPage', {routeName: newNewsRoute});
-			}
-		});
-	}
-});
-
 Template.newsItem.events({
 	'click #edit': function(e){
-		alert("You clicked Edit!");
 		Router.go('adminNewsEdit', {routeName: this.routeName});
 	}
 });
 
 Template.newsItem.events({
 	'click #delete': function(e){
-		alert("You clicked Delete!");
+		if(confirm("Delete this News Item?")) {
+			var currentNewsId = this._id;
+			News.remove(currentNewsId);
+			Router.go('news');
+		}
 	}
 });
