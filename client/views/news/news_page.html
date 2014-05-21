@@ -1,6 +1,12 @@
 <template name="newsPage">
-	<div class="member container">
-	<h3>{{title}}</h3>
-		{{{content}}}
+
+	<div class="container">
+		<div class="member">
+			<h3>{{title}}</h3>
+			{{{content}}}
+			<hr class="spacer20">
+		</div>
+		<p><a href="{{ pathFor 'news'}}">All News</a></p>
 	</div>
+
 </template>

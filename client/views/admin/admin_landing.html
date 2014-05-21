@@ -1,11 +1,16 @@
 <template name="adminHome">
-	<!-- Show content if logged in user is an admin -->
-	{{#if isInRole 'admin'}}
-		<h1 class="white">Admin Dashboard</h1>
-		
-	{{else}}
-	<!-- Show "redirecting" as page redirects for non-admin users -->
-		<h1 class="white">Redirecting...</h1>
-	{{/if}}
-	
+	<div class="container">
+		<!-- Show content if logged in user is an admin -->
+		{{#if isInRole 'admin'}}
+			<h1 class="white">Admin Dashboard</h1>
+			<hr class="spacer20">
+
+			<h5><a href="{{ pathFor 'adminNews'}}">Add News Items</a></h5>
+			<p><a href="{{ pathFor 'news'}}">See/Edit news</a></p>
+			
+		{{else}}
+		<!-- Show "redirecting" as page redirects for non-admin users -->
+			<h1 class="white">Redirecting...</h1>
+		{{/if}}
+	</div>
 </template>
