@@ -1,14 +1,44 @@
 <template name="adminNews">
-	<form class="member">
+	<form class="member container">
 		<label>Title:</label>
 		<input name="title">
 		<br>
 		<textarea id="content" name="content"></textarea>
 		<br>
-		<label>Image Url:</label>
+		<label>Thumbnail Url:</label>
 		<input name="imageUrl">
 		<br>
 		<br>
 		<button class="btn btn-primary" type="submit">Submit</button>
+		<p>
+    
+	</p>
 	</form>
 </template>
+
+
+<template name="adminNewsEdit">
+	<div class="container">
+		<div class="news_edit bg-success">
+			<form>
+				<label class="inline">Title:</label>
+			    <input class="inline" name="title" value="{{title}}">
+				<br>
+				
+				<label>Thumbnail Url:</label>
+				<input name="imageUrl" value="{{imageUrl}}">
+				<hr class="spacer20">
+				<p><i>click anywhere in the white box to edit - highlight or rightclick for options</i></p>
+				<div id="wht_news_edit" class="news_edit_container">
+					<div id="edit_news">{{{content}}}</div>
+				</div>
+				<hr class="spacer10">
+				
+				<button class="btn btn-success" type="submit" id="save">Save</button>
+			</form>
+		</div>
+		
+	</div>
+	
+</template>
+

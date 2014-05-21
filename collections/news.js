@@ -32,5 +32,26 @@ Meteor.methods({
 		var newsId = News.insert(newsItem);
 
 		return newsId;
+	},
+
+	editNewsItem: function(newsAttributes, newsId) {
+		if(!newsAttributes.title)
+			throw new Meteor.Error(422, "Please Enter a title.");
+
+		if (!newsAttributes.content)
+			throw new Meteor.Error(422, 'Please enter some content for this news item.');
+
+		if(newsAttributes.title && newsAttributes.content){
+			News.update(newsId, {$set: newsAttributes}, function(error) {
+				if (error) {
+					return error;
+				}
+				else
+					console.log(newsId);
+					return newsId;
+			});
+			return newsAttributes.routeName;
+		}
+		
 	}
 });

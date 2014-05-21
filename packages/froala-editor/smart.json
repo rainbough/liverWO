@@ -1,0 +1,9 @@
+{
+  "name": "froala-editor",
+  "description": "Froala - a Modern jquery-based html editor, repackaged for meteor.",
+  "homepage": "",
+  "author": "Your Name <your@email> (http://yoursite)",
+  "version": "0.0.1",
+  "git": "",
+  "packages": {}
+}

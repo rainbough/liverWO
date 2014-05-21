@@ -25,8 +25,27 @@ footer, .page-wrap:after {
 }
 /* END STICKY FOOTER //////////////////////////////////// */
 
-
-
+#redactor_content{
+	height: 200px;
+}
+.news_edit{
+	min-height: 500px;
+	border-radius: 20px;
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid green;
+}
+.news_edit input{
+	max-width: 600px;
+}
+.news_edit_container{
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+}
+.inline{
+	display: inline-block;
+}
 .members{
 	color: #5F9EA0;
 }
