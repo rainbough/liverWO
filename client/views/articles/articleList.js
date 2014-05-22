@@ -1,7 +1,4 @@
 /// articleList ///
-
-
-
 Template.articleList.rendered = function(){
     Meteor.call('refreshFeed', function(err, id){
         if(err)

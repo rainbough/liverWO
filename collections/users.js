@@ -10,11 +10,11 @@ Meteor.methods({
 	    var email = userAttributes.email;
 	    var password = userAttributes.password;
 	    var password2 = userAttributes.password2;
-      var memberId = userAttributes.memberId;
+        var memberId = userAttributes.memberId;
 
         // removes whitespace 
 	    var trimInput = function(val) {
-          return val.replace(/\s+/g,'');
+            return val.replace(/\s+/g,'');
         }
 
         email = trimInput(email);
@@ -42,7 +42,9 @@ Meteor.methods({
            memberUpdate(memberId, userId);
            return userId;
         }
-        
-
-	}
+	},
+    returnUsers: function() {
+       
+        console.log(allUsers);
+    }
 });

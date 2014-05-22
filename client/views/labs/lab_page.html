@@ -1,0 +1,9 @@
+<template name="labPage">
+	<div class="container">
+		<h3 class="white">This is the home page for {{labName}}</h3>
+		{{#if permittedRoles}}
+			<h3 class="white">Hidden contents for this lab.</h3>
+			<p class="white">This Content should be hidden unless you are a member of {{labName}}!</p>
+		{{/if}}
+	</div>
+</template>

@@ -1,8 +1,8 @@
 Meteor.publish('members', function() { 
 	return Members.find();
 });
-Meteor.publish('groups', function() {
-	return Groups.find();
+Meteor.publish('labs', function() {
+	return Labs.find();
 });
 
 // Publish the user's feeds.
@@ -21,17 +21,17 @@ Meteor.publish("news", function(){
 
 // server/publish.js
 
-// Give authorized users access to sensitive data by group
-// Meteor.publish('secrets', function (group) {
-//   if (Roles.userIsInRole(this.userId, ['view-secrets','admin'], group)) {
+// Give authorized users access to sensitive data by lab
+Meteor.publish('users', function () {
+	// var user = Meteor.user();
+ //  	if (Roles.userIsInRole(user._id, 'admin')) {
+    return Meteor.users.find();
+    
+  // } else {
 
-//     return Meteor.secrets.find({group: group});
+  //   // user not authorized. do not publish secrets
+  //   this.stop();
+  //   return;
 
-//   } else {
-
-//     // user not authorized. do not publish secrets
-//     this.stop();
-//     return;
-
-//   }
-// });
+  // }
+});

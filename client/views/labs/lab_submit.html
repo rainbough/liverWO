@@ -1,0 +1,28 @@
+<template name="newLab">
+	<div class="container">
+		<form>
+			<div class="controls white">
+				<label>Lab Name</label>
+				<br>
+				<input name="labName" type="text"/>
+			</div>
+			<br>
+			<div class="controls white">
+				<label name="Users">Users</label>
+				<select multiple>
+				{{#each users}}
+					{{#each emails}}
+						<option value="{{address}}">{{address}}</option>
+					{{/each}}
+				{{/each}}
+				</select>
+			</div>
+			<br>
+			<div class="controls">
+				<button class="btn btn-primary" type="submit">Submit</button>
+			</div>
+		</form>
+		<br>
+		<br>
+	</div>
+</template>

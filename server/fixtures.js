@@ -49,12 +49,12 @@ if (Members.find().count() === 0) {
 
 }
 
-if (Groups.find().count() === 0) {
-	Groups.insert({
-		groupName: "ABCGroup"
+if (Labs.find().count() === 0) {
+	Labs.insert({
+		labName: "ABCGroup"
 	});
-	Groups.insert({
-		groupName: "XYZGroup"
+	Labs.insert({
+		labName: "XYZGroup"
 	});
 }
 

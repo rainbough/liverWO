@@ -1,8 +1,8 @@
 <template name="labList">
 	<h3 class="white">This is the list of Labs</h3>
-	{{#each groups}}
+	{{#each labs}}
 		<div class="group white">
-			<a href="{{pathFor 'labPage'}}">{{groupName}}</a>
+			<a href="{{pathFor 'labPage'}}">{{labName}}</a>
 		</div>
 		<br>
 	{{/each}}
