@@ -1,0 +1,9 @@
+<template name="labList">
+	<h3 class="white">This is the list of Labs</h3>
+	{{#each groups}}
+		<div class="group white">
+			<a href="{{pathFor 'labPage'}}">{{groupName}}</a>
+		</div>
+		<br>
+	{{/each}}
+</template>
