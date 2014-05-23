@@ -1,34 +1,38 @@
 <template name="signIn">
-	{{#unless currentUser}}
-		<h3 class="white">Admin Log In:</h3>
-		<br>
-		<form id="login-form" action="">
-			<div class="control-group">
-				<label class="login-labels" for="email">Email</label>
-				<br>
-				<input name="email" type="email" value="" placeholder="email@example.com" />
-			</div>
-			<div class="control-group">
-				<label class="login-labels" for="password">Password</label>
-				<br>
-				<input name="password" type="password" value="" placeholder="" />
-			</div>
+	<div class="container">
+		<hr class="spacer40">
+		{{#unless currentUser}}
+			<h3 class="white">Admin Log In:</h3>
 			<br>
-			<div class="control-group">
-				<div class="controls">
-					<input type="submit" value="Submit" class="btn btn-primary" />
+			<form id="login-form" action="">
+				<div class="control-group">
+					<label class="login-labels" for="email">Email</label>
+					<br>
+					<input name="email" type="email" value="" placeholder="email@example.com" />
 				</div>
-			</div>
-	   </form> 
-	   <br>
-   {{/unless}}
-   {{#if currentUser}}
-	   	<p class="white">You are logged in as: <strong>{{email}}</strong></p>
+				<div class="control-group">
+					<label class="login-labels" for="password">Password</label>
+					<br>
+					<input name="password" type="password" value="" placeholder="" />
+				</div>
+				<br>
+				<div class="control-group">
+					<div class="controls">
+						<input type="submit" value="Submit" class="btn btn-primary" />
+					</div>
+				</div>
+		   </form> 
+		   <br>
+		   <hr class="spacer60">
+	   {{/unless}}
+	   {{#if currentUser}}
+		   	<p class="white">You are logged in as: <strong>{{email}}</strong></p>
 
-	   	<div><a id="logout" href="#">Log Out</a></div>
-	   	<br>
-	
-	   	<button class="btn btn-success" id="profile">Edit Profile</button>
-	   
-   {{/if}}
+		   	<div><a id="logout" href="#">Log Out</a></div>
+		   	<br>
+		
+		   	<button class="btn btn-success" id="profile">Edit Profile</button>
+		   
+	   {{/if}}
+</div>
 </template>

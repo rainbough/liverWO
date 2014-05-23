@@ -44,7 +44,7 @@ Meteor.methods({
         }
 	},
     returnUsers: function() {
-       
+        var allUsers = Meteor.users.find();
         console.log(allUsers);
     }
 });
